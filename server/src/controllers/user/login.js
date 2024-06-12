@@ -8,7 +8,7 @@ const loginUser = async (req, res, next) => {
         let user = await User.findOne({ username });
         
         if (!user || !(await user.matchPassword(password))) 
-            return next(new CustomError('Authentication failed', 403, true))
+            return next(new CustomError('Authentication failed', 403))
 
         user = user.toObject()
         delete user.password
@@ -22,7 +22,7 @@ const loginUser = async (req, res, next) => {
         res.status(200).json({message: 'login successful', user, token})
 
     } catch (error) {
-        return next(new CustomError('Login failed', 500))
+        return next(new CustomError('Login failed', 500, error.message))
     }
 };
 

@@ -28,10 +28,9 @@ const Login = () => {
         setTimeout(() => {
           navigate('/'); // Redirect to landing page after 2 seconds
         }, 2000);
-        setMessage('Signup successful.');
+        setMessage('login successful.');
       }
     } catch (error) {
-      console.log(error.response.headers)
       setMessage(`login failed. Error details: ${error.response.data.message}`);
     }
   };

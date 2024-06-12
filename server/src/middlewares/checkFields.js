@@ -5,7 +5,7 @@ const checkFields = (fields) => {
         const missingFields = fields.filter(field => !req.body.hasOwnProperty(field));
 
         if (missingFields.length > 0) {
-            return next(new CustomError(`Missing required fields: ${missingFields.join(', ')}`, 400));
+            return next(new CustomError(`Missing required fields: ${missingFields.join(', ')}`));
         }
 
         next();

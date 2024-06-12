@@ -9,10 +9,10 @@ const registerUser = async (req, res, next) => {
         const isPasswordOk = password === confirmPassword
 
         if (userExists) 
-            return next(new CustomError(`user with this username already exits`, 400, true))
+            return next(new CustomError(`user with this username already exits`, 400))
 
         if (!isPasswordOk)
-            return next(new CustomError(`password doesn't matches the confirm password`, 400, true))
+            return next(new CustomError(`password doesn't matches the confirm password`, 400))
 
         const {publicKey, privateKey} = await generateKeys()
 
@@ -24,7 +24,7 @@ const registerUser = async (req, res, next) => {
         
         res.status(201).json({message: 'user registered successfully', user: {...user}, privateKey});
     } catch (error) {
-        return next(new CustomError('registration failed', 500, true))
+        return next(new CustomError('registration failed', 500, error.message))
     }
 };
 

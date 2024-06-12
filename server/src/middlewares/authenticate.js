@@ -7,7 +7,7 @@ const authenticate = (method) => {
         let token;
 
         if (!method) {
-            return next(new CustomError('server error, authentication method not specified', 500, true));
+            return next(new CustomError('server error, authentication method not specified', 500));
         }
 
         if (method === 'cookie' && req.cookies && req.cookies.token) {
@@ -17,7 +17,7 @@ const authenticate = (method) => {
         }
 
         if (!token) {
-            return next(new CustomError('Not authorized, no token', 401, true));
+            return next(new CustomError('Not authorized, no token', 401));
         }
 
         try {
@@ -25,12 +25,12 @@ const authenticate = (method) => {
             req.user = await User.findById(decoded.user._id).select('-password');
 
             if (!req.user) {
-                return next(new CustomError('User not found', 404, true));
+                return next(new CustomError('User not found', 404));
             }
 
             next();
         } catch (error) {
-            return next(new CustomError('authentication failed', 500, true));
+            return next(new CustomError('authentication failed', 500, error.message));
         }
     };
 };

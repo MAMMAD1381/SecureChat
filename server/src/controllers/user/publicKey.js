@@ -7,12 +7,12 @@ const getUserPublicKey = async (req, res, next) => {
         const user = await User.findOne({username}).select('username publicKey');
 
         if (!user)
-            return next(new CustomError(`user not found`, 404, true))
+            return next(new CustomError(`user not found`, 404))
         
         res.status(200).json({message:'success', user})
 
     } catch (error) {
-        return next(new CustomError('getting public key failed', 500, true))
+        return next(new CustomError('getting public key failed', 500, error.message))
     }
 };
 
