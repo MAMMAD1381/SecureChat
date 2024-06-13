@@ -10,8 +10,25 @@ dotenv.config();
 
 const app = express();
 // Alternatively, configure CORS options
+// List of allowed origins
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:3001',
+  'http://localhost:3002',
+  // Add other URLs here
+];
+
+// Configure CORS options
 app.use(cors({
-  origin: 'http://localhost:3000', // Allow only this origin
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow specific methods
   credentials: true, // Allow cookies to be sent
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow the headers you need

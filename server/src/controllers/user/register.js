@@ -3,6 +3,7 @@ const CustomError = require('../../utils/CustomError')
 const generateKeys = require('../../utils/generateKeys')
 
 const registerUser = async (req, res, next) => {
+
     const { username, email, password, confirmPassword } = req.body;
     try {
         const userExists = await User.findOne({ username });
@@ -16,7 +17,7 @@ const registerUser = async (req, res, next) => {
 
         const {publicKey, privateKey} = await generateKeys()
 
-        let user = new User({ username, email, password, publicKey});
+        let user = new User({ username, email, password, publicKey, address: req.get('Origin')});
         user = await user.save();
 
         user = user.toObject()

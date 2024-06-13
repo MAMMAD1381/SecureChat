@@ -1,76 +1,94 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Form, Button, ListGroup } from 'react-bootstrap';
-import io from 'socket.io-client';
 
 const Chat = () => {
   const location = useLocation();
   const { user, chatMembers } = location.state; // Get the user and chatMembers from the state
-
-  console.log(user, chatMembers, 'here?')
-  const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const socketRef = useRef(null);
+  const [messageInput, setMessageInput] = useState('');
+  const ws = useRef(null);
 
   useEffect(() => {
-    // Initialize socket connection
-    socketRef.current = io('http://localhost:3001'); // Replace with your server address
+    // Connect to the user's own WebSocket for receiving messages
+    ws.current = new WebSocket(user.address);
+    console.log('create socket for receiving', user.address);
 
-    // Join the room for the current user
-    socketRef.current.emit('join', { userId: user._id });
+    ws.current.onopen = () => {
+      console.log('WebSocket connection established for receiving messages');
+    };
 
-    // Listen for incoming messages
-    socketRef.current.on('message', (message) => {
-      setMessages((prevMessages) => [...prevMessages, message]);
-    });
+    ws.current.onmessage = (event) => {
+      console.log('message received', event.data);
+      receiveMessage(event.data);
+    };
+
+    ws.current.onclose = () => {
+      console.log('WebSocket connection closed for receiving messages');
+    };
+
+    ws.current.onerror = (error) => {
+      console.error('WebSocket error:', error);
+    };
 
     return () => {
-      // Clean up the socket connection on component unmount
-      socketRef.current.disconnect();
+      if (ws.current) {
+        ws.current.close();
+      }
     };
-  }, [user._id]);
+  }, [user.address]);
 
-  const handleSendMessage = (e) => {
-    e.preventDefault();
+  const sendMessage = () => {
+    if (messageInput.trim() === '') return;
 
-    if (message.trim()) {
-      const newMessage = {
-        text: message,
-        user: user.name,
-        timestamp: new Date(),
+    // Open WebSocket connections to all users' addresses to send the message
+    chatMembers.forEach(member => {
+      console.log('sending', member.address);
+      const wsSend = new WebSocket(member.address);
+
+      wsSend.onopen = () => {
+        console.log(`WebSocket connection established with ${member.username} for sending message`);
+        wsSend.send(messageInput);
+        wsSend.current.onmessage = (event) => {
+          console.log('message received', event.data);
+          receiveMessage(event.data);
+        };
+        // wsSend.close(); // Close after sending the message
       };
 
-      // Emit the message to the server
-      socketRef.current.emit('sendMessage', newMessage);
+      wsSend.onerror = (error) => {
+        console.error(`WebSocket error with ${member.username}:`, error);
+      };
 
-      // Add the message to the local state
-      setMessages((prevMessages) => [...prevMessages, newMessage]);
-      setMessage('');
-    }
+      wsSend.onclose = () => {
+        console.log(`WebSocket connection closed with ${member.username} after sending message`);
+      };
+    });
+
+    // Add the sent message to own messages
+    setMessages(prevMessages => [...prevMessages, { text: messageInput, sender: user.name }]);
+    setMessageInput('');
+  };
+
+  const receiveMessage = (message) => {
+    setMessages(prevMessages => [...prevMessages, { text: message, sender: 'Other' }]);
+  };
+
+  const handleChange = (event) => {
+    setMessageInput(event.target.value);
   };
 
   return (
     <div>
-      <ListGroup className="mb-3">
+      <h1>Chat Room</h1>
+      <div style={{ height: '400px', overflowY: 'scroll' }}>
         {messages.map((msg, index) => (
-          <ListGroup.Item key={index}>
-            <strong>{msg.user}</strong>: {msg.text} <small>{new Date(msg.timestamp).toLocaleTimeString()}</small>
-          </ListGroup.Item>
+          <div key={index} style={{ textAlign: msg.sender === user.username ? 'right' : 'left', margin: '5px' }}>
+            <strong>{msg.sender}: </strong>{msg.text}
+          </div>
         ))}
-      </ListGroup>
-      <Form onSubmit={handleSendMessage}>
-        <Form.Group controlId="formMessage">
-          <Form.Control
-            type="text"
-            placeholder="Enter your message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Send
-        </Button>
-      </Form>
+      </div>
+      <input type="text" value={messageInput} onChange={handleChange} />
+      <button onClick={sendMessage}>Send</button>
     </div>
   );
 };

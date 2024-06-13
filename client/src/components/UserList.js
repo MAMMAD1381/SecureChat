@@ -24,7 +24,7 @@ const UserList = () => {
       <Card.Body>
         <Card.Title>Users</Card.Title>
         <ListGroup>
-          {users.length > 0 ? (
+          {users?.length > 0 ? (
             users.map((user, index) => (
               <ListGroup.Item key={index} onClick={() => handleUserClick(user)}>
                 {user.username}
