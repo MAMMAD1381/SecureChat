@@ -1,26 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { ListGroup } from 'react-bootstrap';
+import { Card, ListGroup } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import LocalStorage from '../utils/localStorage';
 
-const GroupsList = ({ user }) => {
+const GroupsList = ({user}) => {
   const [groups, setGroups] = useState([]);
+  const [currentUser, setCurrentUser] = useState(undefined)
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const groupsData = LocalStorage.get('groups');
-    if (groupsData) {
-      setGroups(groupsData);
-    }
-  }, []);
+    setCurrentUser(user)
+    setGroups(LocalStorage.get('groups'))
+  }, [user]);
+
+  const handleGroupClick = (group) => {
+    navigate('/chat', { state: { user: currentUser, target: group } });
+  };
 
   return (
-    <div>
-      <h3>Groups</h3>
-      <ListGroup>
-        {groups.map((group, index) => (
-          <ListGroup.Item key={index}>{group.name}</ListGroup.Item>
-        ))}
-      </ListGroup>
-    </div>
+    <Card className="mb-3">
+      <Card.Body>
+        <Card.Title>Groups</Card.Title>
+        <ListGroup>
+          {groups?.length > 0 ? (
+            groups.map((group, index) => (
+              <ListGroup.Item key={index} onClick={() => handleGroupClick(group)}>
+                {group.name}
+              </ListGroup.Item>
+            ))
+          ) : (
+            <ListGroup.Item>No groups available</ListGroup.Item>
+          )}
+        </ListGroup>
+      </Card.Body>
+    </Card>
   );
 };
 

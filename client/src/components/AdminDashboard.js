@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Button, Row, Col } from 'react-bootstrap';
 import UserProfile from './UserProfile';
-import UserList from './UserList';
+import UserList from './UsersList';
 import CreateChatroom from './CreateChatroom';
 
 const AdminDashboard = () => {

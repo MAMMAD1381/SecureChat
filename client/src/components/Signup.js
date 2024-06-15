@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Alert } from 'react-bootstrap';
-import axios from 'axios';
-import { json, useNavigate } from 'react-router-dom';
-import configs from '../env'
-import LocalStorage from '../utils/localStorage';
+import { useNavigate } from 'react-router-dom';
 import signup from '../controllers/signup'
 
 const Signup = () => {
@@ -17,21 +14,11 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = signup(username, email, password, confirmPassword)
-      // const response = await axios.post(
-      //   `${configs.SERVER_URL}/api/users/register`, 
-      //   { username, email, password, confirmPassword }, 
-      //   { withCredentials: true }
-      // );
-
-      // const user = response.data.user
-      // const token = response.data.token || response.headers['set-cookie']
-      // const privateKey = response.data.privateKey
+      const result = await signup(username, email, password, confirmPassword)
 
       if (result){
-        // LocalStorage.set('user', {...user, token, privateKey})
         setTimeout(() => {
-          navigate('/'); // Redirect to landing page after 2 seconds
+          navigate('/');
         }, 2000);
         setMessage('Signup successful.');
       }

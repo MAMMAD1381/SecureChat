@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Button, Row, Col, Alert, Tabs, Tab } from 'react-bootstrap';
 import UserProfile from './UserProfile';
-import UserList from './UserList';
+import UserList from './UsersList';
 import GroupsList from './GroupsList';
 import RequestAdmin from './RequestAdmin';
 import LocalStorage from '../utils/localStorage';
-import axios from 'axios';
-import configs from '../env';
+import refresh from '../controllers/refresh';
 
 const UserDashboard = () => {
   const [message, setMessage] = useState('');
@@ -24,55 +23,31 @@ const UserDashboard = () => {
 
   const logout = (e) => {
     e.preventDefault();
-    LocalStorage.remove('user');
+    LocalStorage.empty();
     reload();
   };
 
   const refreshUsers = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(
-        `${configs.SERVER_URL}/api/users/`,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${user.token}`,
-          },
-          withCredentials: true,
-        }
-      );
+      const result = await refresh.refreshUsers(user.token);
 
-      const users = response.data.users;
-
-      if (response.status === 200) {
-        LocalStorage.set('users', users);
+      if (result) 
         reload();
-      }
+      
     } catch (error) {
-      setMessage(`refreshing users failed. Error details: ${error.response.data.message}`);
+      setMessage(`refreshing users failed. Error details: ${error}`);
     }
   };
 
   const refreshGroups = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(
-        `${configs.SERVER_URL}/api/groups/`,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${user.token}`,
-          },
-          withCredentials: true,
-        }
-      );
+      const result = await refresh.refreshGroups(user.token);
 
-      const groups = response.data.groups;
-
-      if (response.status === 200) {
-        LocalStorage.set('groups', groups);
+      if (result) 
         reload();
-      }
+      
     } catch (error) {
       setMessage(`refreshing groups failed. Error details: ${error.response.data.message}`);
     }
@@ -84,18 +59,18 @@ const UserDashboard = () => {
       {message && <Alert variant="info">{message}</Alert>}
       <UserProfile />
       <Row className="mt-3">
-        <Col>
-          <Tabs defaultActiveKey="users" id="uncontrolled-tab-example">
-            <Tab eventKey="users" title="Users">
-              <UserList user={user} />
-              <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshUsers}>Refresh Users</Button>
-            </Tab>
-            <Tab eventKey="groups" title="Groups">
-              <GroupsList user={user} />
-              <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshGroups}>Refresh Groups</Button>
-            </Tab>
-          </Tabs>
+        <Col md={6}>
+          <h3>Users</h3>
+          <UserList user={user} />
+          <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshUsers}>Refresh Users</Button>
         </Col>
+        <Col md={6}>
+          <h3>Groups</h3>
+          <GroupsList user={user} />
+          <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshGroups}>Refresh Groups</Button>
+        </Col>
+      </Row>
+      <Row>
         <Col>
           <RequestAdmin />
         </Col>

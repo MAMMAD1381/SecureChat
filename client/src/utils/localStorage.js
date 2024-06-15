@@ -15,6 +15,10 @@ class LocalStorage{
   static remove(key){
     localStorage.removeItem(key)
   }
+
+  static empty(){
+    localStorage.clear();
+  }
 }
 
 export default LocalStorage
