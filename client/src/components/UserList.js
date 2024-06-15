@@ -3,20 +3,18 @@ import { Card, ListGroup } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import LocalStorage from '../utils/localStorage';
 
-const UserList = () => {
+const UserList = ({user}) => {
   const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState(undefined)
   const navigate = useNavigate();
 
   useEffect(() => {
+    setCurrentUser(user)
     setUsers(LocalStorage.get('users'))
-  }, []);
+  }, [user]);
 
   const handleUserClick = (user) => {
-    // Navigate to the chat page and pass the selected user as state
-    console.log(user)
-    // const chatMembers = users; // Or however you derive chatMembers from the users
-    // Navigate to the chat page and pass the selected user and chatMembers as state
-    navigate('/chat', { state: { user, chatMembers: users } });
+    navigate('/chat', { state: { user: currentUser, target: user } });
   };
 
   return (

@@ -4,9 +4,6 @@ import LandingPage from './components/LandingPage';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Chat from './components/Chat';
-import UserDashboard from './components/UserDashboard';
-import AdminDashboard from './components/AdminDashboard';
-import SuperAdminDashboard from './components/SuperAdminDashboard';
 
 function App() {
 

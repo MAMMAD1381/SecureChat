@@ -1,95 +1,96 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import io from 'socket.io-client';
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import configs from '../env';
 
 const Chat = () => {
   const location = useLocation();
-  const { user, chatMembers } = location.state; // Get the user and chatMembers from the state
+  const { user, target } = location.state; // Get the user and target from the state
   const [messages, setMessages] = useState([]);
-  const [messageInput, setMessageInput] = useState('');
-  const ws = useRef(null);
+  const [message, setMessage] = useState('');
+  const socketRef = useRef();
 
   useEffect(() => {
-    // Connect to the user's own WebSocket for receiving messages
-    ws.current = new WebSocket(user.address);
-    console.log('create socket for receiving', user.address);
+    const socket = io(configs.SERVER_SOCKET_URL, {
+      auth: { token: user.token },
+    });
+    socketRef.current = socket;
 
-    ws.current.onopen = () => {
-      console.log('WebSocket connection established for receiving messages');
-    };
-
-    ws.current.onmessage = (event) => {
-      console.log('message received', event.data);
-      receiveMessage(event.data);
-    };
-
-    ws.current.onclose = () => {
-      console.log('WebSocket connection closed for receiving messages');
-    };
-
-    ws.current.onerror = (error) => {
-      console.error('WebSocket error:', error);
-    };
-
-    return () => {
-      if (ws.current) {
-        ws.current.close();
-      }
-    };
-  }, [user.address]);
-
-  const sendMessage = () => {
-    if (messageInput.trim() === '') return;
-
-    // Open WebSocket connections to all users' addresses to send the message
-    chatMembers.forEach(member => {
-      console.log('sending', member.address);
-      const wsSend = new WebSocket(member.address);
-
-      wsSend.onopen = () => {
-        console.log(`WebSocket connection established with ${member.username} for sending message`);
-        wsSend.send(messageInput);
-        wsSend.current.onmessage = (event) => {
-          console.log('message received', event.data);
-          receiveMessage(event.data);
-        };
-        // wsSend.close(); // Close after sending the message
-      };
-
-      wsSend.onerror = (error) => {
-        console.error(`WebSocket error with ${member.username}:`, error);
-      };
-
-      wsSend.onclose = () => {
-        console.log(`WebSocket connection closed with ${member.username} after sending message`);
-      };
+    socket.on('privateMessage', (data) => {
+      setMessages((prevMessages) => [...prevMessages, data]);
     });
 
-    // Add the sent message to own messages
-    setMessages(prevMessages => [...prevMessages, { text: messageInput, sender: user.name }]);
-    setMessageInput('');
-  };
+    socket.on('disconnect', () => {
+      console.log('Disconnected from server');
+    });
 
-  const receiveMessage = (message) => {
-    setMessages(prevMessages => [...prevMessages, { text: message, sender: 'Other' }]);
+    return () => {
+      socket.disconnect();
+    };
+  }, [user.token]);
+
+  const sendMessage = () => {
+    if (message.trim() === '') return;
+    socketRef.current.emit('privateMessage', { user, target, message }, (ack) => {
+      console.log(ack);
+    });
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { user, target, message },
+    ]);
+    setMessage('');
   };
 
   const handleChange = (event) => {
-    setMessageInput(event.target.value);
+    setMessage(event.target.value);
   };
 
   return (
-    <div>
-      <h1>Chat Room</h1>
-      <div style={{ height: '400px', overflowY: 'scroll' }}>
-        {messages.map((msg, index) => (
-          <div key={index} style={{ textAlign: msg.sender === user.username ? 'right' : 'left', margin: '5px' }}>
-            <strong>{msg.sender}: </strong>{msg.text}
-          </div>
-        ))}
-      </div>
-      <input type="text" value={messageInput} onChange={handleChange} />
-      <button onClick={sendMessage}>Send</button>
-    </div>
+    <Container className="mt-5">
+      <Row>
+        <Col>
+          <h1 className="text-center">Chat Room</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Card className="mb-4">
+            <Card.Body style={{ height: '400px', overflowY: 'scroll' }}>
+              {messages.map((msg, index) => (
+                <div
+                  key={index}
+                  className={`d-flex justify-content-${msg.user.username === user.username ? 'end' : 'start'} mb-2`}
+                >
+                  <div
+                    className={`p-2 rounded ${msg.user.username === user.username ? 'bg-primary text-white' : 'bg-light'}`}
+                  >
+                    <strong>{msg.user.username}: </strong>{msg.message}
+                  </div>
+                </div>
+              ))}
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Form onSubmit={(e) => { e.preventDefault(); sendMessage(); }}>
+            <Form.Group controlId="messageInput">
+              <Form.Control
+                type="text"
+                placeholder="Type your message here..."
+                value={message}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Button variant="primary" type="submit" className="mt-2">
+              Send
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

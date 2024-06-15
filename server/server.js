@@ -1,50 +1,22 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const userRoutes = require('./src/routes/userRoutes');
-const connectDB = require('./src/utils/connectDB');
-const errorHandler = require('./src/utils/errorHandler')
-const cors = require('cors');
-const bodyParser = require('body-parser');
+const dotenv = require('dotenv')
+const connectDB = require('./src/utils/connectDB')
+const initializeExpressServer = require('./servers/expressServer')
+const initializeSocketServer = require('./servers/socketServer')
 
-dotenv.config();
-
-const app = express();
-// Alternatively, configure CORS options
-// List of allowed origins
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://localhost:3001',
-  'http://localhost:3002',
-  // Add other URLs here
-];
-
-// Configure CORS options
-app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow specific methods
-  credentials: true, // Allow cookies to be sent
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow the headers you need
-  exposedHeaders: ['Content-Type', 'Authorization'] // Expose the headers you need
-}));
-
-app.use(bodyParser.json())
-
-app.use(express.json());
-
+dotenv.config()
 connectDB()
 
-app.use('/api/users', userRoutes);
+const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : []
 
-// add error handler
-app.use(errorHandler)
+const expressApp = initializeExpressServer(allowedOrigins)
+const socketServer = initializeSocketServer(expressApp, allowedOrigins)
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const SOCKET_PORT = process.env.SOCKET_PORT || 4000
+socketServer.listen(SOCKET_PORT, () => {
+  console.log(`Socket server is running on port ${SOCKET_PORT}`)
+})
+
+const EXPRESS_PORT = process.env.EXPRESS_PORT || 5000
+expressApp.listen(EXPRESS_PORT, () => {
+  console.log(`Express server running on port ${EXPRESS_PORT}`)
+})

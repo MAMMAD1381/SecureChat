@@ -1,6 +1,6 @@
 const User = require('../../models/User');
 const CustomError = require('../../utils/CustomError')
-const generateToken = require('../../utils/generateToken')
+const {generateToken} = require('../../utils/jwt')
 
 const loginUser = async (req, res, next) => {
     const { username, password } = req.body;

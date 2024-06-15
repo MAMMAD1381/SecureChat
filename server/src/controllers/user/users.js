@@ -3,7 +3,7 @@ const CustomError = require('../../utils/CustomError');
 
 const getUsers = async (req, res, next) => {
     try {
-        const users = await User.find().select('username address publicKey');
+        const users = await User.find().select('username publicKey');
 
         res.status(200).json({message: 'success', users});
     } catch (error) {
