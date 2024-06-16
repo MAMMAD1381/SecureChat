@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const userRoutes = require('../src/routes/userRoutes')
+const groupRoutes = require('../src/routes/groupRoutes')
 const errorHandler = require('../src/utils/errorHandler')
 
 function initializeExpressServer(allowedOrigins) {
@@ -29,6 +30,7 @@ function initializeExpressServer(allowedOrigins) {
   app.use(express.json())
 
   app.use('/api/users', userRoutes)
+  app.use('/api/groups', groupRoutes)
 
   // add error handler
   app.use(errorHandler)

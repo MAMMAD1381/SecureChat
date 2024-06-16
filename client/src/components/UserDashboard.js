@@ -6,6 +6,7 @@ import GroupsList from './GroupsList';
 import RequestAdmin from './RequestAdmin';
 import LocalStorage from '../utils/localStorage';
 import refresh from '../controllers/refresh';
+import requestAdmin from '../controllers/requestAdmin';
 
 const UserDashboard = () => {
   const [message, setMessage] = useState('');
@@ -53,6 +54,23 @@ const UserDashboard = () => {
     }
   };
 
+  const handleRequestAdmin = async (e) => {
+    e.preventDefault()
+    try {
+      const result = await requestAdmin(user.username, user.token);
+
+      if (result) {
+        setMessage('admin role requested successfully')
+        console.log('successfully')
+      }
+        // reload();
+      
+    } catch (error) {
+      console.log(error.response.data)
+      setMessage(`requesting admin role failed. Error details: ${error.response.data.message}`);
+    }
+  }
+
   return (
     <Container className="mt-5">
       <h2>User's Dashboard</h2>
@@ -72,10 +90,10 @@ const UserDashboard = () => {
       </Row>
       <Row>
         <Col>
-          <RequestAdmin />
+          <Button variant="warning" onClick={handleRequestAdmin}>Request Admin Role</Button>
+          <Button variant="danger" onClick={logout}>Logout</Button>
         </Col>
       </Row>
-      <Button variant="danger" onClick={logout}>Logout</Button>
     </Container>
   );
 };

@@ -24,7 +24,7 @@ async function refreshUsers(token){
 
 async function refreshGroups(token){
   const response = await axios.get(
-    `${configs.SERVER_URL}/api/users/groups`,
+    `${configs.SERVER_URL}/api/groups/`,
     {
       headers: {
         'Content-Type': 'application/json',

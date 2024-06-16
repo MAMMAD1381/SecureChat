@@ -4,6 +4,7 @@ import LandingPage from './components/LandingPage';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Chat from './components/Chat';
+import GroupChat from './components/GroupChat';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/groupChat" element={<GroupChat />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>

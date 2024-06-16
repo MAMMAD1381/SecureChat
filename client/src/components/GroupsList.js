@@ -10,11 +10,14 @@ const GroupsList = ({user}) => {
 
   useEffect(() => {
     setCurrentUser(user)
-    setGroups(LocalStorage.get('groups'))
+    if(LocalStorage.get('groups'))
+      setGroups(LocalStorage.get('groups'))
+    console.log(groups)
   }, [user]);
 
   const handleGroupClick = (group) => {
-    navigate('/chat', { state: { user: currentUser, target: group } });
+    console.log(currentUser, group)
+    navigate('/groupChat', { state: { user: currentUser, group } });
   };
 
   return (

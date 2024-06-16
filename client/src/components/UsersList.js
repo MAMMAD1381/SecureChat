@@ -10,7 +10,8 @@ const UserList = ({user}) => {
 
   useEffect(() => {
     setCurrentUser(user)
-    setUsers(LocalStorage.get('users'))
+    if(LocalStorage.get('users'))
+      setUsers(LocalStorage.get('users'))
   }, [user]);
 
   const handleUserClick = (user) => {

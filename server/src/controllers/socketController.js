@@ -2,22 +2,16 @@ const CustomError = require('../utils/CustomError')
 const {jwtDecoder} = require('../utils/jwt')
 
 async function handlePrivateMessage(socket, io, data, ack) {
-  // const token = socket.handshake.auth.token
-  // console.log('token', token)
-  // if (!token) return
-
-  // const decodedUser = await jwtDecoder(token)
-
-  // if (!io.users) io.users = []
-  // if(io.users.includes(decodedUser.username)) return
-
-  // io.users.push(decodedUser.username)
-  console.log(data)
   console.log(`new Message from ${data.user.username}. to ${data.target.username}`)
-  // io.to()
-  console.log(io.users[data.target.username].id)
+
   io.users[data.target.username].emit('privateMessage', data)
-  // ack(`ack: ${decodedUser.username} registered`)
+}
+
+async function handleGroupMessage(socket, io, data, ack) {
+
+  const { user, group, message } = data
+  group.members.map(member => member === user.username ? null : io.users[member].emit('groupMessage', data))
+  console.log(`message from ${user} to ${group.name}`)
 }
 
 
@@ -34,4 +28,5 @@ async function handleDisconnect(socket, io) {
 module.exports = {
   handleDisconnect,
   handlePrivateMessage,
+  handleGroupMessage
 }
