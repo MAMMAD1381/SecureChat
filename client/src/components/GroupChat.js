@@ -33,6 +33,9 @@ const GroupChat = () => {
 
   const sendMessage = () => {
     if (message.trim() === '') return;
+    socketRef.current.emit('joinGroup', { user, group, message }, (ack) => {
+      console.log(ack);
+    });
     socketRef.current.emit('groupMessage', { user, group, message }, (ack) => {
       console.log(ack);
     });
