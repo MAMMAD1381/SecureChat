@@ -10,7 +10,7 @@ const authenticate = require('../middlewares/authenticate')
 const authorize = require('../middlewares/authorize')
 const checkFields = require('../middlewares/checkFields')
 
-router.get('/', authenticate('Bearer'), authorize(['user', 'admin', 'super']), getGroups);
+router.get('/groups', authenticate('Bearer'), authorize(['user', 'admin', 'super']), getGroups);
 router.post('/create', authenticate('Bearer'), checkFields(['groupName', 'description', 'users']), authorize(['admin', 'super']), createGroups);
 
 module.exports = router;

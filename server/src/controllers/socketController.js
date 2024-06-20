@@ -5,7 +5,8 @@ const Group = require('../models/Group')
 async function handlePrivateMessage(socket, io, data, ack) {
   console.log(`new Message from ${data.user.username}. to ${data.target.username}`)
 
-  io.users[data.target.username].emit('privateMessage', data)
+  try{ io.users[data.target.username].emit('privateMessage', data) }
+  catch(err){}
 }
 
 async function handleGroupMessage(socket, io, data, ack) {

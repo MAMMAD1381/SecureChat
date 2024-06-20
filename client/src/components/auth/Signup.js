@@ -1,37 +1,37 @@
-import React, { useState } from 'react';
-import { Container, Form, Button, Alert } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-import signup from '../controllers/signup'
+import React, { useState } from 'react'
+import { Container, Form, Button, Alert } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
+import { signup } from '../../controllers/auth'
+import { useMessage } from '../MessageContext'
 
 const Signup = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [message, setMessage] = useState('');
-  const navigate = useNavigate(); // Initialize navigate
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const {showMessage} = useMessage()
+  const navigate = useNavigate() // Initialize navigate
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
       const result = await signup(username, email, password, confirmPassword)
 
-      if (result){
+      if (result) {
         setTimeout(() => {
-          navigate('/');
-        }, 2000);
-        setMessage('Signup successful.');
+          navigate('/')
+        }, 2000)
+        showMessage('Signup successful.')
       }
     } catch (error) {
       console.log(error.response.headers)
-      setMessage(`Signup failed. Error details: ${error.response.data.message}`);
+      showMessage(`Signup failed. Error details: ${error.response.data.message}`)
     }
-  };
+  }
 
   return (
     <Container className="mt-5">
       <h2>Signup</h2>
-      {message && <Alert variant="info">{message}</Alert>}
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
@@ -63,7 +63,6 @@ const Signup = () => {
           />
         </Form.Group>
 
-
         <Form.Group controlId="formBasicConfirmPassword">
           <Form.Label>ConfirmPassword</Form.Label>
           <Form.Control
@@ -79,7 +78,7 @@ const Signup = () => {
         </Button>
       </Form>
     </Container>
-  );
-};
+  )
+}
 
-export default Signup;
+export default Signup

@@ -12,7 +12,6 @@ const createGroup = async (req, res, next) => {
       return await User.findOne({ username });
     }));
 
-    // Create the group
     const newGroup = new Group({
       name: groupName,
       description,
@@ -22,7 +21,6 @@ const createGroup = async (req, res, next) => {
 
     const savedGroup = await newGroup.save();
 
-    // console.log(updatedUser)
     updatedUser.groupsOwned.push({
       groupId: savedGroup._id,
       groupName: groupName
@@ -41,31 +39,7 @@ const createGroup = async (req, res, next) => {
         groupName: groupName
       });
       await user.save()
-      // return await User.findOne({ username }).select('username');
     }));
-    // Update the owner (user who created the group)
-    // user.groupsOwned.push({
-    //   groupId: savedGroup._id,
-    //   groupName: groupName
-    // });
-
-    // Update members
-    // console.log('username')
-
-    // users.map(async (username) => {
-    //   console.log(username)
-    //   const member = await User.findOne({ username });
-    //   if (member) {
-    //     member.groupsJoined.push({
-    //       groupId: savedGroup._id,
-    //       groupName: groupName
-    //     });
-    //     await member.save();
-    //   }
-    // });
-
-    // await Promise.all(membersUpdatePromises);
-    // await user.save();
 
     res.status(201).json({ message: 'Group created successfully', group: savedGroup });
   } catch (error) {

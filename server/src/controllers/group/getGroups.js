@@ -6,7 +6,6 @@ const getGroups = async (req, res, next) => {
     try {
         const user = await User.findOne({ username: req.user.username }).select('groupsJoined');
 
-        // Fetch user groups and populate members
         const userGroups = await Promise.all(user.groupsJoined.map(async (groupInfo) => {
             return await Group.findOne({ name: groupInfo.groupName }).populate('members', 'username email');
         }));

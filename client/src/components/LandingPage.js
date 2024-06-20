@@ -1,22 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import UserDashboard from './UserDashboard';
-import AdminDashboard from './AdminDashboard';
-import SuperAdminDashboard from './SuperAdminDashboard';
+import UserDashboard from './dashboards/UserDashboard';
+import AdminDashboard from './dashboards/AdminDashboard';
+import SuperAdminDashboard from './dashboards/SuperAdminDashboard';
+import { getProfile } from '../controllers/user';
+import { useMessage } from './MessageContext';
 
 const LandingPage = () => {
   
   const [user, setUser] = useState(undefined);
+  const {showMessage} = useMessage()
+
+  const fetchUser = async () => {
+    try{
+      const result = await getProfile();
+      setUser(result);
+    }
+    catch(error){
+      // showMessage(error.message, 'danger')
+      // set
+    }
+  };
 
   useEffect(() => {
-    // Check if user is logged in and fetch role from API or local storage
-    const jsonUser = localStorage.getItem('user');
-    if (!jsonUser)
-      setUser(undefined)
-    else
-      setUser(JSON.parse(jsonUser))
-    
+    fetchUser();
   }, []);
 
   if (!user) {

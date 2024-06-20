@@ -1,90 +1,106 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Button, Row, Col, Alert, Modal, Form } from 'react-bootstrap'
-import UserProfile from './UserProfile'
-import UserList from './UsersList'
-import GroupsList from './GroupsList'
-import LocalStorage from '../utils/localStorage'
-import refresh from '../controllers/refresh'
-import createGroup from '../controllers/createGroup' // Ensure this function is implemented
+import { Container, Button, Row, Col, Spinner, Modal, Form } from 'react-bootstrap'
 
-const UserDashboard = () => {
-  const [message, setMessage] = useState('')
+// components
+import UserProfile from './UserProfile'
+import UserList from '../lists/UsersList'
+import GroupsList from '../lists/GroupsList'
+
+// controllers
+import { createGroup, getGroups } from '../../controllers/group'
+import { getProfile, getUsers } from '../../controllers/user'
+import { logout } from '../../controllers/auth'
+import configs from '../../env'
+import { useMessage } from '../MessageContext'
+
+const AdminDashboard = () => {
   const [user, setUser] = useState(undefined)
   const [showCreateGroupModal, setShowCreateGroupModal] = useState(false)
   const [groupName, setGroupName] = useState('')
   const [groupDescription, setGroupDescription] = useState('')
   const [groupMembers, setGroupMembers] = useState([])
   const [users, setUsers] = useState([])
+  const [groups, setGroups] = useState([])
+  const {showMessage} = useMessage()
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setUser(LocalStorage.get('user') ? LocalStorage.get('user') : [])
-    setUsers(LocalStorage.get('users') ? LocalStorage.get('users') : [])
+    refreshData()
   }, [])
 
-  const reload = () => window.location.reload()
-
-  const logout = (e) => {
-    e.preventDefault()
-    LocalStorage.empty()
-    reload()
-  }
-
-  const refreshUsers = async (e) => {
-    e.preventDefault()
+  const refreshData = async () => {
     try {
-      const result = await refresh.refreshUsers(user.token)
-      if (result) reload()
+      await Promise.all([refreshProfile(), refreshUsers(), refreshGroups()]);
     } catch (error) {
-      setMessage(`refreshing users failed. Error details: ${error}`)
+      showMessage(`Error refreshing data: ${error}`, 'danger');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const refreshProfile = async () => {
+    try {
+      const user = await getProfile()
+      setUser(user)
+    } catch (error) {
+      showMessage(`fetching profile failed. Error details: ${error}`)
     }
   }
 
-  const refreshGroups = async (e) => {
-    e.preventDefault()
+  const refreshUsers = async () => {
     try {
-      const result = await refresh.refreshGroups(user.token)
-      if (result) reload()
+      const users = await getUsers()
+      setUsers(users)
     } catch (error) {
-      setMessage(`refreshing groups failed. Error details: ${error.response.data.message}`)
+      showMessage(`Refreshing users failed. Error details: ${error}`)
     }
   }
 
-  const handleCreateGroup = async (e) => {
-    e.preventDefault()
+  const refreshGroups = async () => {
+    try {
+      const groups = await getGroups()
+      setGroups(groups)
+    } catch (error) {
+      showMessage(`Refreshing groups failed. Error details: ${error.response.data.message}`)
+    }
+  }
+
+  const handleCreateGroup = async () => {
     const groupData = {
-      // user: user.username,
       groupName,
       description: groupDescription,
       users: groupMembers,
     }
     try {
-      const result = await createGroup(groupData, user.token)
+      const result = await createGroup(groupData)
       if (result) {
-        setMessage('Group created successfully')
+        showMessage('Group created successfully')
         setShowCreateGroupModal(false)
-        // reload();
       }
     } catch (error) {
-      setMessage(`Creating group failed. Error details: ${error.response.data.message}`)
+      showMessage(`Creating group failed. Error details: ${error.response.data.message}`)
     }
+  }
+
+  if (loading) {
+    return <Spinner animation="border" />;
   }
 
   return (
     <Container className="mt-5">
       <h2>Admin's Dashboard</h2>
-      {message && <Alert variant="info">{message}</Alert>}
       <UserProfile />
       <Row className="mt-3">
         <Col md={6}>
           <h3>Users</h3>
-          <UserList user={user} />
+          <UserList user={user} users={users} />
           <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshUsers}>
             Refresh Users
           </Button>
         </Col>
         <Col md={6}>
           <h3>Groups</h3>
-          <GroupsList user={user} />
+          <GroupsList user={user} groups={groups} />
           <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshGroups}>
             Refresh Groups
           </Button>
@@ -159,4 +175,4 @@ const UserDashboard = () => {
   )
 }
 
-export default UserDashboard
+export default AdminDashboard
