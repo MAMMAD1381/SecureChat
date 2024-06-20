@@ -4,6 +4,9 @@ import io from 'socket.io-client'
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap'
 import configs from '../../env'
 import LocalStorage from '../../utils/localStorage'
+import { getPublickey } from '../../controllers/user'
+import Crypto from '../../utils/Crypto'
+import { useMessage } from '../MessageContext'
 
 const Chat = () => {
   const location = useLocation()
@@ -11,6 +14,7 @@ const Chat = () => {
   const [messages, setMessages] = useState([])
   const [message, setMessage] = useState('')
   const socketRef = useRef()
+  const { showMessage } = useMessage()
 
   useEffect(() => {
     const socket = io(configs.SERVER_SOCKET_URL, {
@@ -18,7 +22,17 @@ const Chat = () => {
     })
     socketRef.current = socket
 
-    socket.on('privateMessage', (data) => {
+    socket.on('privateMessage', async (data) => {
+      const { user, encodedMessage, signature } = data
+      try {
+        const sendersPublickey = await getPublickey(user.username)
+        const crypto = new Crypto(LocalStorage.get('private_key'), sendersPublickey)
+        const decodedMessage = crypto.decryptData(encodedMessage)
+        crypto.verifySignature(decodedMessage, signature)
+        data.message = decodedMessage
+      } catch (err) {
+        showMessage('decoding or verification of new message failed' + err.message, 'danger')
+      }
       setMessages((prevMessages) => [...prevMessages, data])
     })
 
@@ -29,11 +43,20 @@ const Chat = () => {
     return () => {
       socket.disconnect()
     }
-  }, [user.token])
+  }, [])
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (message.trim() === '') return
-    socketRef.current.emit('privateMessage', { user, target, message }, (ack) => {
+    let signature, encodedMessage
+    try {
+      const targetsPublickey = await getPublickey(target.username)
+      const crypto = new Crypto(LocalStorage.get('private_key'), targetsPublickey)
+      signature = crypto.signData(message)
+      encodedMessage = crypto.encryptData(message)
+    } catch (err) {
+      showMessage('encoding or signing message failed', 'danger')
+    }
+    socketRef.current.emit('privateMessage', { user, target, signature, encodedMessage }, (ack) => {
       console.log(ack)
     })
     setMessages((prevMessages) => [...prevMessages, { user, target, message }])

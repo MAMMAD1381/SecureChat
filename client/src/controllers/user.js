@@ -55,4 +55,21 @@ async function getProfile() {
   }
 }
 
-export { deleteUser, getUsers, getProfile }
+async function getPublickey(username) {
+  const token = LocalStorage.get('token')
+  const response = await axios.get(`${configs.SERVER_URL}/api/user/publickey/${username}`, {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+    withCredentials: true,
+  })
+
+  const publickey = response.data.user.publicKey
+
+  if (response.status === 200) {
+    return publickey
+  }
+}
+
+export { deleteUser, getUsers, getProfile, getPublickey }
