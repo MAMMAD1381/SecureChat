@@ -13,8 +13,9 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true },
     salt: { type: String },
     publicKey: { type: String },
-    groupsOwned: [groupInfoSchema],  // Embedded subdocument schema
-    groupsJoined: [groupInfoSchema]  // Embedded subdocument schema
+    privateKey: { type: String },
+    groupsOwned: [groupInfoSchema],
+    groupsJoined: [groupInfoSchema]
 });
 
 userSchema.pre('save', async function (next) {

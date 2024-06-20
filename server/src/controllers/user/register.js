@@ -19,7 +19,7 @@ const registerUser = async (req, res, next) => {
 
         const {publicKey, privateKey} = await generateKeys()
 
-        let user = new User({ username, email, password, publicKey});
+        let user = new User({ username, email, password, publicKey, privateKey});
         user = await user.save();
 
         user = user.toObject()
@@ -33,7 +33,7 @@ const registerUser = async (req, res, next) => {
             sameSite: 'Strict' // Adjust according to your needs ('Strict', 'Lax', 'None')
         });
 
-        res.status(201).json({message: 'user registered successfully', user: {...user}, privateKey, token});
+        res.status(201).json({message: 'user registered successfully', user, privateKey, token});
     } catch (error) {
         return next(new CustomError('registration failed', 500, error.message))
     }
