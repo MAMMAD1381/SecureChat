@@ -4,6 +4,9 @@ import io from 'socket.io-client'
 import { Container, Row, Col, Form, Button, Card, ListGroup } from 'react-bootstrap'
 import configs from '../../env'
 import LocalStorage from '../../utils/localStorage'
+import UsersList from '../lists/UsersList'
+import { getUsers } from '../../controllers/user'
+import { useMessage } from '../MessageContext'
 
 const GroupChat = () => {
   const location = useLocation()
@@ -11,8 +14,20 @@ const GroupChat = () => {
   const [messages, setMessages] = useState([])
   const [message, setMessage] = useState('')
   const socketRef = useRef()
+  const [users, setUsers] = useState([])
+  const { showMessage } = useMessage()
+
+  const refreshUsers = async () => {
+    try {
+      const users = await getUsers()
+      setUsers(users)
+    } catch (error) {
+      showMessage(`Refreshing users failed. Error details: ${error}`)
+    }
+  }
 
   useEffect(() => {
+    refreshUsers()
     const socket = io(configs.SERVER_SOCKET_URL, {
       auth: { token: LocalStorage.get('token') },
     })
@@ -56,13 +71,28 @@ const GroupChat = () => {
       </Row>
       <Row>
         <Col md={3}>
-          <h5>Chat Members</h5>
-          <ListGroup>
-            {group.members.map((target, index) => (
-              <ListGroup.Item key={index}>{target}</ListGroup.Item>
-            ))}
-          </ListGroup>
+          <h5>Users</h5>
+          <UsersList user={user} users={users} />
+          <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshUsers}>
+            Refresh Users
+          </Button>
+
+          <h5 className="mt-4">Group Info</h5>
+          <Card>
+            <Card.Body>
+              <Card.Text><strong>Name:</strong> {group.name}</Card.Text>
+              <Card.Text><strong>Description:</strong> {group.description}</Card.Text>
+              <Card.Text><strong>Owner:</strong> {group.owner}</Card.Text>
+              <Card.Text><strong>Members:</strong></Card.Text>
+              <ListGroup>
+                {group.members.map((target, index) => (
+                  <ListGroup.Item key={index}>{target}</ListGroup.Item>
+                ))}
+              </ListGroup>
+            </Card.Body>
+          </Card>
         </Col>
+        
         <Col md={9}>
           <Card className="mb-4">
             <Card.Body style={{ height: '400px', overflowY: 'scroll' }}>
