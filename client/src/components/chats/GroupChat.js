@@ -1,66 +1,95 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { useLocation } from 'react-router-dom'
-import io from 'socket.io-client'
-import { Container, Row, Col, Form, Button, Card, ListGroup } from 'react-bootstrap'
-import configs from '../../env'
-import LocalStorage from '../../utils/localStorage'
-import UsersList from '../lists/UsersList'
-import { getUsers } from '../../controllers/user'
-import { useMessage } from '../MessageContext'
+// GroupChat.js
+import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
+import io from 'socket.io-client';
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import configs from '../../env';
+import LocalStorage from '../../utils/localStorage';
+import { getUsers } from '../../controllers/user';
+import { useMessage } from '../MessageContext';
+import GroupDescription from './GroupDescription';
+import { inviteUserToGroup, removeUserFromGroup} from '../../controllers/group'
 
 const GroupChat = () => {
-  const location = useLocation()
-  const { user, group } = location.state // Get the user and targets from the state
-  const [messages, setMessages] = useState([])
-  const [message, setMessage] = useState('')
-  const socketRef = useRef()
-  const [users, setUsers] = useState([])
-  const { showMessage } = useMessage()
+  const location = useLocation();
+  const { user, group } = location.state; // Get the user and targets from the state
+  const [messages, setMessages] = useState([]);
+  const [message, setMessage] = useState('');
+  const socketRef = useRef();
+  const [usersNotInGroup, setUsersNotInGroup] = useState([]);
+  const { showMessage } = useMessage();
 
   const refreshUsers = async () => {
     try {
-      const users = await getUsers()
-      setUsers(users)
+      const allUsers = await getUsers();
+      const nonGroupUsers = allUsers.filter(u => !group.members.includes(u.username));
+      setUsersNotInGroup(nonGroupUsers);
     } catch (error) {
-      showMessage(`Refreshing users failed. Error details: ${error}`)
+      showMessage(`Refreshing users failed. Error details: ${error}`);
     }
-  }
+  };
 
   useEffect(() => {
-    refreshUsers()
+    refreshUsers();
     const socket = io(configs.SERVER_SOCKET_URL, {
       auth: { token: LocalStorage.get('token') },
-    })
-    socketRef.current = socket
+    });
+    socketRef.current = socket;
 
     socket.on('groupMessage', (data) => {
-      if (data.group.name === group.name) setMessages((prevMessages) => [...prevMessages, data])
-    })
+      if (data.group.name === group.name) setMessages((prevMessages) => [...prevMessages, data]);
+    });
 
     socket.on('disconnect', () => {
-      console.log('Disconnected from server')
-    })
+      console.log('Disconnected from server');
+    });
 
     return () => {
-      socket.disconnect()
-    }
-  }, [user.token, user, group])
+      socket.disconnect();
+    };
+  }, [user.token, user, group]);
 
   const sendMessage = () => {
-    if (message.trim() === '') return
+    if (message.trim() === '') return;
     socketRef.current.emit('joinGroup', { user, group, message }, (ack) => {
-      console.log(ack)
-    })
+      console.log(ack);
+    });
     socketRef.current.emit('groupMessage', { user, group, message }, (ack) => {
-      console.log(ack)
-    })
-    setMessages((prevMessages) => [...prevMessages, { user, message }])
-    setMessage('')
-  }
+      console.log(ack);
+    });
+    setMessages((prevMessages) => [...prevMessages, { user, message }]);
+    setMessage('');
+  };
 
   const handleChange = (event) => {
-    setMessage(event.target.value)
-  }
+    setMessage(event.target.value);
+  };
+
+  const handleAddMember = async (username) => {
+    try{
+      const result = await inviteUserToGroup(group, username)
+      if (result)
+        showMessage('invite sent to ' + username, 'info')
+
+      await refreshUsers()
+    }
+    catch(err){
+      showMessage('invite to ' + username + ' failed', 'danger')
+    }
+  };
+
+  const handleRemoveMember = async (username) => {
+    try{
+      const result = await removeUserFromGroup(group, username)
+      if (result)
+        showMessage(`user ${username} removed from group `, 'info')
+
+      await refreshUsers()
+    }
+    catch(err){
+      showMessage('failed to remove user', 'danger')
+    }
+  };
 
   return (
     <Container className="mt-5">
@@ -71,26 +100,13 @@ const GroupChat = () => {
       </Row>
       <Row>
         <Col md={3}>
-          <h5>Users</h5>
-          <UsersList user={user} users={users} />
-          <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshUsers}>
-            Refresh Users
-          </Button>
-
-          <h5 className="mt-4">Group Info</h5>
-          <Card>
-            <Card.Body>
-              <Card.Text><strong>Name:</strong> {group.name}</Card.Text>
-              <Card.Text><strong>Description:</strong> {group.description}</Card.Text>
-              <Card.Text><strong>Owner:</strong> {group.owner}</Card.Text>
-              <Card.Text><strong>Members:</strong></Card.Text>
-              <ListGroup>
-                {group.members.map((target, index) => (
-                  <ListGroup.Item key={index}>{target}</ListGroup.Item>
-                ))}
-              </ListGroup>
-            </Card.Body>
-          </Card>
+          <GroupDescription
+            user={user}
+            group={group}
+            usersNotInGroup={usersNotInGroup}
+            onAddMember={handleAddMember}
+            onRemoveMember={handleRemoveMember}
+          />
         </Col>
         
         <Col md={9}>
@@ -117,8 +133,8 @@ const GroupChat = () => {
           </Card>
           <Form
             onSubmit={(e) => {
-              e.preventDefault()
-              sendMessage()
+              e.preventDefault();
+              sendMessage();
             }}
           >
             <Form.Group controlId="messageInput">
@@ -136,7 +152,7 @@ const GroupChat = () => {
         </Col>
       </Row>
     </Container>
-  )
-}
+  );
+};
 
-export default GroupChat
+export default GroupChat;

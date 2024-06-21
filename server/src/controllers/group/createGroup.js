@@ -30,6 +30,7 @@ const createGroup = async (req, res, next) => {
       name: groupName,
       description,
       owner: user.username,
+      members:[user.username],
       cert: cert._id,
     })
 

@@ -6,11 +6,12 @@ import UserProfile from './UserProfile';
 import UserList from '../lists/UsersList';
 import GroupsList from '../lists/GroupsList';
 import AdminRequestsList from '../lists/AdminRequestsList';
+import GroupInvitationsList from '../lists/GroupInvitationsList';
 
 // controllers
 import { getAdminRequests } from '../../controllers/admin';
 import { getUsers, getProfile } from '../../controllers/user';
-import { getGroups, createGroup } from '../../controllers/group';
+import { getGroups, createGroup,getGroupInvitations } from '../../controllers/group';
 import { logout } from '../../controllers/auth';
 import { useMessage } from '../MessageContext';
 
@@ -23,6 +24,7 @@ const SuperAdminDashboard = () => {
   const [users, setUsers] = useState([]);
   const [groups, setGroups] = useState([]);
   const [adminRequests, setAdminRequests] = useState([]);
+  const [groupInvitations, setGroupInvitations] = useState([])
   const [loading, setLoading] = useState(true);
   const { showMessage } = useMessage();
 
@@ -32,7 +34,7 @@ const SuperAdminDashboard = () => {
 
   const refreshData = async () => {
     try {
-      await Promise.all([refreshProfile(), refreshUsers(), refreshGroups(), refreshAdminRequests()]);
+      await Promise.all([refreshProfile(), refreshUsers(), refreshGroups(), refreshAdminRequests(), refreshGroupInvitations()]);
     } catch (error) {
       showMessage(`Error refreshing data: ${error}`, 'danger');
     } finally {
@@ -78,6 +80,17 @@ const SuperAdminDashboard = () => {
     }
   };
 
+  const refreshGroupInvitations = async () => {
+    try {
+      const invitations = await getGroupInvitations()
+      console.log('in', invitations)
+      setGroupInvitations(invitations)
+    } catch (error) {
+      console.log(error)
+      showMessage(`Refreshing group invitations failed. Error details: ${error.message}`)
+    }
+  }
+
   const handleCreateGroup = async (e) => {
     e.preventDefault();
     const groupData = {
@@ -105,7 +118,7 @@ const SuperAdminDashboard = () => {
       <h2>Super Admin's Dashboard</h2>
       <UserProfile />
       <Row className="mt-3">
-        <Col md={4}>
+        <Col md={3}>
           <h3>Users</h3>
           {user && users.length > 0 ? (
             <UserList user={user} users={users} />
@@ -116,7 +129,7 @@ const SuperAdminDashboard = () => {
             Refresh Users
           </Button>
         </Col>
-        <Col md={4}>
+        <Col md={3}>
           <h3>Groups</h3>
           {groups.length > 0 ? (
             <GroupsList user={user} groups={groups} />
@@ -127,7 +140,7 @@ const SuperAdminDashboard = () => {
             Refresh Groups
           </Button>
         </Col>
-        <Col md={4}>
+        <Col md={3}>
           <h3>Admin Requests</h3>
           {adminRequests.length > 0 ? (
             <AdminRequestsList user={user} adminRequests={adminRequests} />
@@ -136,6 +149,13 @@ const SuperAdminDashboard = () => {
           )}
           <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshAdminRequests}>
             Refresh Requests
+          </Button>
+        </Col>
+        <Col md={3}>
+          <h3>Group Invitations</h3>
+          <GroupInvitationsList user={user} groupInvitations={groupInvitations} />
+          <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshGroupInvitations}>
+            Refresh Group Invitations
           </Button>
         </Col>
       </Row>
