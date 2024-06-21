@@ -174,25 +174,6 @@ const SuperAdminDashboard = () => {
                 onChange={(e) => setGroupDescription(e.target.value)}
               />
             </Form.Group>
-            <Form.Group controlId="formGroupMembers">
-              <Form.Label>Group Members</Form.Label>
-              <Form.Control
-                as="select"
-                multiple
-                value={groupMembers}
-                onChange={(e) =>
-                  setGroupMembers([...e.target.selectedOptions].map((option) => option.value))
-                }
-              >
-                {users?.map((member) =>
-                  user.username === member.username ? null : (
-                    <option key={member._id} value={member.username}>
-                      {member.username}
-                    </option>
-                  )
-                )}
-              </Form.Control>
-            </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
