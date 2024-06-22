@@ -9,7 +9,7 @@ const requestAdmin = async (req, res, next) => {
     // Check if the user already has a pending or approved admin request
     const existingRequest = await RequestAdmin.findOne({
       username: username,
-      status: { $in: ['pending', 'approved'] }
+      status: 'pending'
     });
 
     if (existingRequest) {

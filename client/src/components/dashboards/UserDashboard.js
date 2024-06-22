@@ -66,13 +66,18 @@ const UserDashboard = () => {
   }
 
   const handleRequestAdmin = async () => {
-    const result = await createAdminRequest(user.username)
-
-    if (!(result instanceof Error)) 
-      showMessage('admin role requested successfully')
     
-    else
-      showMessage(`requesting admin role failed. Error details: ${result.message}`)
+    try{
+      const result = await createAdminRequest(user.username)
+      if (result) 
+        showMessage('admin role requested successfully')
+    }
+    catch(err){
+
+      showMessage(`requesting admin role failed. Error details: ${err.message}`)
+    }
+
+    
     
   }
 
@@ -96,21 +101,33 @@ const UserDashboard = () => {
       <Row className="mt-3">
         <Col md={4}>
           <h3>Users</h3>
-          <UserList user={user} users={users} />
+          {user && users.length > 0 ? (
+            <UserList user={user} users={users} />
+          ) : (
+            <p>No users found.</p>
+          )}
           <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshUsers}>
             Refresh Users
           </Button>
         </Col>
         <Col md={4}>
           <h3>Groups</h3>
-          <GroupsList user={user} groups={groups} />
+          {groups.length > 0 ? (
+            <GroupsList user={user} groups={groups} />
+          ) : (
+            <p>No groups found.</p>
+          )}
           <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshGroups}>
             Refresh Groups
           </Button>
         </Col>
         <Col md={4}>
           <h3>Group Invitations</h3>
-          <GroupInvitationsList user={user} groupInvitations={groupInvitations} />
+          {groupInvitations.length > 0 ? (
+            <GroupInvitationsList user={user} groupInvitations={groupInvitations} />
+          ) : (
+            <p>No Group Invitations found.</p>
+          )}
           <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshGroupInvitations}>
             Refresh Group Invitations
           </Button>

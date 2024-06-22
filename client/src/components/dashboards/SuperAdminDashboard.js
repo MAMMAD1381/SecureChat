@@ -11,7 +11,7 @@ import GroupInvitationsList from '../lists/GroupInvitationsList';
 // controllers
 import { getAdminRequests } from '../../controllers/admin';
 import { getUsers, getProfile } from '../../controllers/user';
-import { getGroups, createGroup,getGroupInvitations } from '../../controllers/group';
+import { createGroup,getGroupInvitations, getAllGroups } from '../../controllers/group';
 import { logout } from '../../controllers/auth';
 import { useMessage } from '../MessageContext';
 
@@ -20,7 +20,6 @@ const SuperAdminDashboard = () => {
   const [showCreateGroupModal, setShowCreateGroupModal] = useState(false);
   const [groupName, setGroupName] = useState('');
   const [groupDescription, setGroupDescription] = useState('');
-  const [groupMembers, setGroupMembers] = useState([]);
   const [users, setUsers] = useState([]);
   const [groups, setGroups] = useState([]);
   const [adminRequests, setAdminRequests] = useState([]);
@@ -55,9 +54,7 @@ const SuperAdminDashboard = () => {
     try {
       const requests = await getAdminRequests();
       setAdminRequests(requests);
-      console.log(requests)
     } catch (error) {
-      console.log(error)
       showMessage(`fetching admin requests failed. Error details: ${error}`, 'danger');
     }
   };
@@ -73,7 +70,8 @@ const SuperAdminDashboard = () => {
 
   const refreshGroups = async () => {
     try {
-      const groups = await getGroups();
+      const groups = await getAllGroups();
+      // const groups = await getGroups();
       setGroups(groups);
     } catch (error) {
       showMessage(`Refreshing groups failed. Error details: ${error.response?.data?.message || error.message}`, 'danger');
@@ -83,10 +81,8 @@ const SuperAdminDashboard = () => {
   const refreshGroupInvitations = async () => {
     try {
       const invitations = await getGroupInvitations()
-      console.log('in', invitations)
       setGroupInvitations(invitations)
     } catch (error) {
-      console.log(error)
       showMessage(`Refreshing group invitations failed. Error details: ${error.message}`)
     }
   }
@@ -96,7 +92,6 @@ const SuperAdminDashboard = () => {
     const groupData = {
       groupName,
       description: groupDescription,
-      users: groupMembers,
     };
     try {
       const result = await createGroup(groupData, user.token);
@@ -104,6 +99,7 @@ const SuperAdminDashboard = () => {
         showMessage('Group created successfully', 'success');
         setShowCreateGroupModal(false);
       }
+      await refreshGroups()
     } catch (error) {
       showMessage(`Creating group failed. Error details: ${error.response?.data?.message || error.message}`, 'danger');
     }
@@ -153,7 +149,11 @@ const SuperAdminDashboard = () => {
         </Col>
         <Col md={3}>
           <h3>Group Invitations</h3>
-          <GroupInvitationsList user={user} groupInvitations={groupInvitations} />
+          {groupInvitations.length > 0 ? (
+            <GroupInvitationsList user={user} groupInvitations={groupInvitations} />
+          ) : (
+            <p>No Group Invitations found.</p>
+          )}
           <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshGroupInvitations}>
             Refresh Group Invitations
           </Button>

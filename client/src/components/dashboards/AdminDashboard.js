@@ -19,7 +19,6 @@ const AdminDashboard = () => {
   const [showCreateGroupModal, setShowCreateGroupModal] = useState(false)
   const [groupName, setGroupName] = useState('')
   const [groupDescription, setGroupDescription] = useState('')
-  const [groupMembers, setGroupMembers] = useState([])
   const [users, setUsers] = useState([])
   const [groups, setGroups] = useState([])
   const [groupInvitations, setGroupInvitations] = useState([])
@@ -80,7 +79,6 @@ const AdminDashboard = () => {
     const groupData = {
       groupName,
       description: groupDescription,
-      users: groupMembers,
     }
     try {
       const result = await createGroup(groupData)
@@ -88,6 +86,7 @@ const AdminDashboard = () => {
         showMessage('Group created successfully')
         setShowCreateGroupModal(false)
       }
+      await refreshGroups()
     } catch (error) {
       showMessage(`Creating group failed. Error details: ${error.response.data.message}`)
     }
@@ -104,21 +103,33 @@ const AdminDashboard = () => {
       <Row className="mt-3">
         <Col md={4}>
           <h3>Users</h3>
-          <UserList user={user} users={users} />
+          {user && users.length > 0 ? (
+            <UserList user={user} users={users} />
+          ) : (
+            <p>No users found.</p>
+          )}
           <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshUsers}>
             Refresh Users
           </Button>
         </Col>
         <Col md={4}>
           <h3>Groups</h3>
-          <GroupsList user={user} groups={groups} />
+          {user && groups.length > 0 ? (
+            <GroupsList user={user} groups={groups} />
+          ) : (
+            <p>No users found.</p>
+          )}
           <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshGroups}>
             Refresh Groups
           </Button>
         </Col>
         <Col md={4}>
           <h3>Group Invitations</h3>
-          <GroupInvitationsList user={user} groupInvitations={groupInvitations} />
+          {groupInvitations.length > 0 ? (
+            <GroupInvitationsList user={user} groupInvitations={groupInvitations} />
+          ) : (
+            <p>No Group Invitations found.</p>
+          )}
           <Button variant="info" className="mt-2 mb-3 btn-sm" onClick={refreshGroupInvitations}>
             Refresh Group Invitations
           </Button>

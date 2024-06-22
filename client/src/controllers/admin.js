@@ -50,9 +50,9 @@ async function getAdminRequests() {
 
 async function approveAdminRequest(username) {
   const token = LocalStorage.get('token')
-
   const response = await axios.post(
-    `${configs.SERVER_URL}/api/admin/adminRequests/approve`,
+    `${configs.SERVER_URL}/api/admin/adminRequest/approve`,
+    { username },
     {
       headers: {
         'Content-Type': 'application/json',
@@ -60,19 +60,18 @@ async function approveAdminRequest(username) {
       },
       withCredentials: true,
     },
-    { username }
   )
 
-  if (response.status === 201) {
+  if (response.status === 200) {
     return 'success'
   }
 }
 
 async function denyAdminRequest(username) {
   const token = LocalStorage.get('token')
-
   const response = await axios.post(
-    `${configs.SERVER_URL}/api/admin/adminRequests/deny`,
+    `${configs.SERVER_URL}/api/admin/adminRequest/deny`,
+    { username },
     {
       headers: {
         'Content-Type': 'application/json',
@@ -80,10 +79,9 @@ async function denyAdminRequest(username) {
       },
       withCredentials: true,
     },
-    { username }
   )
 
-  if (response.status === 201) {
+  if (response.status === 200) {
     return 'success'
   }
 }

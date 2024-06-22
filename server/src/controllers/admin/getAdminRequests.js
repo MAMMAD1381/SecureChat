@@ -6,7 +6,7 @@ const getAdminRequests = async (req, res, next) => {
   try {
 
     const existingRequests = await RequestAdmin.find({
-      status: { $in: ['pending', 'approved'] }
+      status: 'pending'
     });
 
     res.status(200).json({

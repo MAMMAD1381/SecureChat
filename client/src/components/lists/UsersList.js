@@ -1,14 +1,14 @@
 import React from 'react'
 import { ListGroup, Button } from 'react-bootstrap'
 import { useMessage } from '../MessageContext'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 // controllers
 import { deleteUser } from '../../controllers/user'
 
 const UserList = ({ user, users }) => {
-  const showMessage = useMessage()
-  const navigate = useNavigate();
+  const { showMessage } = useMessage()
+  const navigate = useNavigate()
 
   const handleDeleteUser = async (username) => {
     try {
@@ -17,43 +17,54 @@ const UserList = ({ user, users }) => {
         showMessage('User deleted successfully')
       }
     } catch (error) {
-      showMessage(`Deleting user failed. Error details: ${error.response.data.message}`)
+      showMessage(`Deleting user failed. Error details: ${error.message}`)
     }
   }
 
-  const handleUserClick = (member) => {
-    navigate('/chat', { state: { user, target: member } });
-  };
+  const handleSendMessage = (member) => {
+    navigate('/chat', { state: { user, target: member } })
+  }
 
-  return ( user.role === 'super' ? 
+  return (
     <ListGroup>
       {users?.map((member) =>
         user.username === member.username ? null : (
-          <ListGroup.Item key={member._id} onClick={() => handleUserClick(member)}>
-            {member.username}
-            <Button
-              variant="danger"
-              className="float-right"
-              onClick={() => handleDeleteUser(member.username)}
-            >
-              X
-            </Button>
+          <ListGroup.Item
+            key={member._id}
+            className="d-flex justify-content-between align-items-center"
+            style={{ position: 'relative' }}
+          >
+            <span>{member.username}</span>
+            <div style={{ display: 'flex', gap: '5px' }}>
+              {user.role === 'super' && (
+                <Button
+                  variant="danger"
+                  size="sm"
+                  style={{
+                    padding: '0.2rem 0.4rem',
+                    fontSize: '0.8rem',
+                  }}
+                  onClick={() => handleDeleteUser(member.username)}
+                >
+                  delete
+                </Button>
+              )}
+              <Button
+                variant="primary"
+                size="sm"
+                style={{
+                  padding: '0.2rem 0.4rem',
+                  fontSize: '0.8rem',
+                }}
+                onClick={() => handleSendMessage(member)}
+              >
+                ✉
+              </Button>
+            </div>
           </ListGroup.Item>
         )
       )}
     </ListGroup>
-
-    :
-
-    <ListGroup>
-    {users?.map((member) =>
-      user.username === member.username ? null : (
-        <ListGroup.Item key={member._id} onClick={() => handleUserClick(member)}>
-          {member.username}
-        </ListGroup.Item>
-      )
-    )}
-  </ListGroup>
   )
 }
 

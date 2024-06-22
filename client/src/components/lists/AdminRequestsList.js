@@ -4,49 +4,57 @@ import { approveAdminRequest, denyAdminRequest } from '../../controllers/admin'
 import { useMessage } from '../MessageContext'
 
 const AdminRequestsList = ({ user, adminRequests }) => {
-  const showMessage = useMessage()
+  const { showMessage } = useMessage()
 
-  const handleApproveAdminRequest = async (requestId) => {
+  const handleApproveAdminRequest = async (username) => {
     try {
-      const result = await approveAdminRequest(requestId, user.token)
+      const result = await approveAdminRequest(username)
       if (result) {
         showMessage('Admin request approved successfully')
       }
     } catch (error) {
-      showMessage(`Approving admin request failed. Error details: ${error.response.data.message}`)
+      showMessage(`Approving admin request failed. Error details: ${error.message}`)
     }
   }
 
-  const handleDenyAdminRequest = async (requestId) => {
+  const handleDenyAdminRequest = async (username) => {
     try {
-      const result = await denyAdminRequest(requestId, user.token)
+      const result = await denyAdminRequest(username)
       if (result) {
         showMessage('Admin request denied successfully')
       }
     } catch (error) {
-      showMessage(`Denying admin request failed. Error details: ${error.response.data.message}`)
+      showMessage(`Denying admin request failed. Error details: ${error.message}`)
     }
   }
 
   return (
     <ListGroup>
       {adminRequests.map((request) => (
-        <ListGroup.Item key={request._id}>
-          {request.username}
-          <Button
-            variant="success"
-            className="float-right"
-            onClick={() => handleApproveAdminRequest(request._id)}
-          >
-            ✓
-          </Button>
-          <Button
-            variant="danger"
-            className="float-right"
-            onClick={() => handleDenyAdminRequest(request._id)}
-          >
-            X
-          </Button>
+        <ListGroup.Item
+          key={request._id}
+          className="d-flex justify-content-between align-items-center"
+          style={{ position: 'relative' }}
+        >
+          <span>{request.username}</span>
+          <div style={{ display: 'flex', gap: '5px' }}>
+            <Button
+              variant="success"
+              size="sm"
+              style={{ padding: '0.2rem 0.4rem', fontSize: '0.8rem' }}
+              onClick={() => handleApproveAdminRequest(request.username)}
+            >
+              ✓
+            </Button>
+            <Button
+              variant="danger"
+              size="sm"
+              style={{ padding: '0.2rem 0.4rem', fontSize: '0.8rem' }}
+              onClick={() => handleDenyAdminRequest(request.username)}
+            >
+              X
+            </Button>
+          </div>
         </ListGroup.Item>
       ))}
     </ListGroup>
