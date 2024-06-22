@@ -168,6 +168,25 @@ async function getAllGroups() {
   }
 }
 
+async function getGroupCert(cert) {
+  const token = LocalStorage.get('token')
+  const response = await axios.get(
+    `${configs.SERVER_URL}/api/group/cert/${cert}`,
+    // { cert },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      withCredentials: true,
+    }
+  )
+
+  if (response.status === 200) {
+    return response.data.cert
+  }
+}
+
 export {
   deleteGroup,
   createGroup,
@@ -179,4 +198,5 @@ export {
   denyInvitation,
   getGroupInvitations,
   getAllGroups,
+  getGroupCert
 }

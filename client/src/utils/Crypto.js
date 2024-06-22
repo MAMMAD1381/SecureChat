@@ -2,8 +2,8 @@ import forge from 'node-forge';
 
 class Crypto {
   constructor(privateKeyPem, publicKeyPem) {
-    this.privateKey = forge.pki.privateKeyFromPem(privateKeyPem);
-    this.publicKey = forge.pki.publicKeyFromPem(publicKeyPem);
+    this.privateKey = privateKeyPem ? forge.pki.privateKeyFromPem(privateKeyPem) : null;
+    this.publicKey = publicKeyPem ? forge.pki.publicKeyFromPem(publicKeyPem) : null;
   }
 
   // Method to sign data

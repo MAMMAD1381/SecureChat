@@ -12,7 +12,7 @@ const removeMember = async (req, res, next) => {
 
     if (!groupExits) return next(new CustomError('group not found', 404))
 
-    const invitation = await GroupInvitation.findOne({groupName})
+    const invitation = await GroupInvitation.findOne({groupName, status:'pending'})
     invitation.status = 'accepted'
     await invitation.save()
 

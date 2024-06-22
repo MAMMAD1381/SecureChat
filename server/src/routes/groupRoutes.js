@@ -11,6 +11,7 @@ const rejectGroupInvitation = require('../controllers/group/rejectGroupInvitatio
 const getGroupInvitations = require('../controllers/group/getGroupInvitations')
 const deleteGroup = require('../controllers/group/deleteGroup')
 const getAllGroups = require('../controllers/group/getAllGroups')
+const getGroupCert = require('../controllers/group/getGroupCert')
 
 // middlewares
 const authenticate = require('../middlewares/authenticate')
@@ -26,5 +27,6 @@ router.patch('/removeMember', authenticate('Bearer'), checkFields(['groupName', 
 router.post('/invitation/accept', authenticate('Bearer'), checkFields(['groupName']), authorize(['user', 'admin', 'super']), acceptGroupInvitation);
 router.post('/invitation/reject', authenticate('Bearer'), checkFields(['groupName']), authorize(['user', 'admin', 'super']), rejectGroupInvitation);
 router.get('/invitations', authenticate('Bearer'), authorize(['user', 'admin', 'super']), getGroupInvitations);
+router.get('/cert/:cert', authenticate('Bearer'), authorize(['user', 'admin', 'super']), getGroupCert);
 
 module.exports = router;
