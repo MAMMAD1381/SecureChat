@@ -5,10 +5,11 @@ import io from 'socket.io-client';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import configs from '../../env';
 import LocalStorage from '../../utils/localStorage';
-import { getUsers } from '../../controllers/user';
+import { getUsers, getPublickey } from '../../controllers/user';
 import { useMessage } from '../MessageContext';
 import GroupDescription from './GroupDescription';
 import { inviteUserToGroup, removeUserFromGroup} from '../../controllers/group'
+import Crypto from '../../utils/Crypto';
 
 const GroupChat = () => {
   const location = useLocation();
@@ -36,8 +37,16 @@ const GroupChat = () => {
     });
     socketRef.current = socket;
 
-    socket.on('groupMessage', (data) => {
-      if (data.group.name === group.name) setMessages((prevMessages) => [...prevMessages, data]);
+    socket.on('groupMessage', async (data) => {
+      try {
+        const { user, group, message, signature } = data
+        const sendersPublickey = await getPublickey(user.username)
+        const crypto = new Crypto(null, sendersPublickey)
+        crypto.verifySignature(message, signature)
+        if (data.group.name === group.name) setMessages((prevMessages) => [...prevMessages, data]);
+      } catch (err) {
+        showMessage('decoding or verification of new message failed' + err.message, 'danger')
+      }
     });
 
     socket.on('disconnect', () => {
@@ -49,16 +58,23 @@ const GroupChat = () => {
     };
   }, [user.token, user, group]);
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (message.trim() === '') return;
-    socketRef.current.emit('joinGroup', { user, group, message }, (ack) => {
-      console.log(ack);
-    });
-    socketRef.current.emit('groupMessage', { user, group, message }, (ack) => {
-      console.log(ack);
-    });
-    setMessages((prevMessages) => [...prevMessages, { user, message }]);
-    setMessage('');
+    try {
+      const crypto = new Crypto(LocalStorage.get('private_key'), null)
+      const signature = crypto.signData(message)
+      socketRef.current.emit('joinGroup', { user, group, message, signature }, (ack) => {
+        console.log(ack);
+      });
+      socketRef.current.emit('groupMessage', { user, group, message, signature }, (ack) => {
+        console.log(ack);
+      });
+      setMessages((prevMessages) => [...prevMessages, { user, message }]);
+      setMessage('');
+    } catch (err) {
+      showMessage('encoding or signing message failed', 'danger')
+    }
+
   };
 
   const handleChange = (event) => {

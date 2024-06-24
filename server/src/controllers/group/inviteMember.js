@@ -1,5 +1,8 @@
-const User = require('../../models/User')
+// utils
 const CustomError = require('../../utils/CustomError')
+const logger = require('../../utils/logger')
+
+// models
 const Group = require('../../models/Group')
 const GroupInvitation = require('../../models/GroupInvitation')
 const Cert = require('../../models/Cert')
@@ -27,8 +30,10 @@ const inviteMember = async (req, res, next) => {
     invitation = await invitation.save()
 
     res.status(200).json({ message: 'success inviting user', invitation })
+
+    logger.info(`user ${user.username} invited user: ${member} to group: ${groupName}`)
+
   } catch (error) {
-    console.log(error)
     next(new CustomError('inviting user failed failed', 500, error.message))
   }
 }

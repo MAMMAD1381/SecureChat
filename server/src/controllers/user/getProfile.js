@@ -1,11 +1,15 @@
-const User = require('../../models/User');
+// utils
 const CustomError = require('../../utils/CustomError')
+const logger = require('../../utils/logger')
 
+// models
+const User = require('../../models/User');
 
 const getProfile = async (req, res, next) => {
 
-    let user = req.user
     try {
+        let user = req.user
+
         const userExists = await User.findOne({ username:user.username });
 
         if (!userExists) 
@@ -15,6 +19,9 @@ const getProfile = async (req, res, next) => {
         delete user.password
 
         res.status(200).json({message: 'profile request successful', profile: user});
+
+        logger.info(`user: ${user.username} requested it's profile`)
+
     } catch (error) {
         return next(new CustomError('fetching user profile failed', 500, error.message))
     }

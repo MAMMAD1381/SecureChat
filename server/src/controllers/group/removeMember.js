@@ -1,7 +1,10 @@
-const User = require('../../models/User')
+// utils
 const CustomError = require('../../utils/CustomError')
-const Group = require('../../models/Group')
+const logger = require('../../utils/logger')
 
+// models
+const User = require('../../models/User')
+const Group = require('../../models/Group')
 
 const removeMember = async (req, res, next) => {
   try {
@@ -19,10 +22,13 @@ const removeMember = async (req, res, next) => {
     await updatedUser.save()
 
     const group = await Group.findOne({ name: groupName })
-    group.members = group.members.filter((mmber) => mmber !== member)
+    group.members = group.members.filter((m) => m !== member)
     await group.save()
 
     res.status(200).json({ message: 'user removed from group successfully' })
+
+    logger.info(`user: ${user.username} removed user: ${member} from group: ${groupName}`)
+
   } catch (error) {
     next(new CustomError('removing user from group failed', 500, error.message))
   }

@@ -1,6 +1,10 @@
+// utils
+const CustomError = require('../../utils/CustomError')
+const logger = require('../../utils/logger')
+
+// models
 const User = require('../../models/User')
 const RequestAdmin = require('../../models/RequestAdmin')
-const CustomError = require('../../utils/CustomError')
 
 const approveAdminRequest = async (req, res, next) => {
   try {
@@ -24,6 +28,8 @@ const approveAdminRequest = async (req, res, next) => {
       message: 'admin request granted',
       user: updatedUser,
     })
+    
+    logger.info(`admin request of ${username} was accepted by ${user.username}`)
   } catch (error) {
     next(new CustomError('approving admin request failed', 500, error.message))
   }

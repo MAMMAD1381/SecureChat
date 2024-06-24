@@ -1,0 +1,1046 @@
+2024-06-24T08:30:43.053Z [31merror[39m: uncaughtException: Unexpected identifier 'install'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\acceptGroupInvitation.js:33
+    npm install winston
+        ^^^^^^^
+
+SyntaxError: Unexpected identifier 'install'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js:9:31)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:31:17.875Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\acceptGroupInvitation.js:33
+    logger.info(`invitation to group: ${} ${user.username}`)
+                                        ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js:9:31)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:34:09.262Z [31merror[39m: uncaughtException: Cannot find module '../../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\createGroup.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\createGroup.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\createGroup.js:3:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:34:11.259Z [31merror[39m: uncaughtException: Cannot find module '../../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\createGroup.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\createGroup.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\createGroup.js:3:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:35:40.820Z [31merror[39m: uncaughtException: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\deleteGroup.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\deleteGroup.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\deleteGroup.js:3:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:35:43.559Z [31merror[39m: uncaughtException: Cannot find module '../../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\deleteGroup.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\deleteGroup.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\deleteGroup.js:3:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:37:17.291Z [31merror[39m: uncaughtException: Missing initializer in const declaration
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getAllGroups.js:2
+const log
+      ^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js:13:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:37:21.552Z [31merror[39m: uncaughtException: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getAllGroups.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getAllGroups.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getAllGroups.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:37:23.791Z [31merror[39m: uncaughtException: Cannot find module '../../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getAllGroups.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getAllGroups.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getAllGroups.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:39:21.143Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getGroupCert.js:16
+    logger.info(`group certificate with id: ${} ${user.username}`)
+                                              ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js:14:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:42:14.525Z [31merror[39m: uncaughtException: Identifier 'user' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getGroups.js:9
+        const user = await User.findOne({ username: req.user.username }).select('groupsJoined');
+              ^
+
+SyntaxError: Identifier 'user' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js:5:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:42:22.298Z [31merror[39m: uncaughtException: Identifier 'user' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getGroups.js:9
+        const user = await User.findOne({ username: user.username }).select('groupsJoined');
+              ^
+
+SyntaxError: Identifier 'user' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js:5:19)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:43:23.364Z [31merror[39m: uncaughtException: Cannot find module '../../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getGroups.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getGroups.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\getGroups.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:43:54.892Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\inviteMember.js:31
+    logger.info(`user ${user.username} invited ${}`)
+                                                 ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:44:41.623Z [31merror[39m: uncaughtException: Cannot find module '../../utils/logger`'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\inviteMember.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../utils/logger`'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\inviteMember.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\inviteMember.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:46:19.538Z [31merror[39m: uncaughtException: Unexpected token 'const'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\rejectGroupInvitation.js:5
+const Group = require('../../models/Group')
+^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js:10:31)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:47:01.055Z [31merror[39m: uncaughtException: Cannot find module '../../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\rejectGroupInvitation.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\rejectGroupInvitation.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\rejectGroupInvitation.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:47:02.803Z [31merror[39m: uncaughtException: Cannot find module '../../utils'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\rejectGroupInvitation.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../utils'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\rejectGroupInvitation.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\rejectGroupInvitation.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:47:06.412Z [31merror[39m: uncaughtException: Cannot find module '../../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\rejectGroupInvitation.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\rejectGroupInvitation.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\rejectGroupInvitation.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:48:48.307Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\removeMember.js:27
+    logger.info(`user: ${user.username} removed user: ${}`)
+                                                        ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:49:32.931Z [31merror[39m: uncaughtException: Cannot find module '../../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\removeMember.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\removeMember.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\removeMember.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:49:35.074Z [31merror[39m: uncaughtException: Cannot find module '../../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\removeMember.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\removeMember.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\groupRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\removeMember.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T08:51:03.698Z [31merror[39m: uncaughtException: Unexpected token 'const'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\deleteUser.js:3
+const User = require('../../models/User');
+^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js:16:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:51:49.670Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\deleteUser.js:16
+        logger.info(`user ${} by ${username}`)
+                            ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js:16:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:51:52.389Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\deleteUser.js:16
+        logger.info(`user: ${} by ${username}`)
+                             ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js:16:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T08:57:19.494Z [31merror[39m: uncaughtException: Unexpected token 'const'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\publicKey.js:2
+const CustomError = require('../../utils/CustomError')
+^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js:6:26)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:02:41.815Z [31merror[39m: uncaughtException: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\users.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\users.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\users.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T09:03:11.077Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\users.js:14
+        logger.info(`user: ${}`)
+                             ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:03:23.524Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\users.js:16
+        logger.info(`user: ${}`)
+                             ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:04:44.619Z [31merror[39m: uncaughtException: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\socketServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\socketServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T09:04:47.270Z [31merror[39m: uncaughtException: Cannot find module '../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\socketServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../utils/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\socketServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T09:05:36.229Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:10
+  logger.info(`new private message from ${}`)
+                                          ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:05:47.049Z [31merror[39m: uncaughtException: Missing initializer in const declaration
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:10
+  console.log(`new Message from ${data.user.username}. to ${data.target.username}`)
+  ^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:05:49.564Z [31merror[39m: uncaughtException: Missing initializer in destructuring declaration
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:9
+  const {user}
+        ^^^^^^
+
+SyntaxError: Missing initializer in destructuring declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:05:56.225Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:11
+  logger.info(`new private message from ${}`)
+                                          ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:06:01.456Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:11
+  logger.info(`new private message from ${}`)
+                                          ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:06:05.620Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:11
+  logger.info(`new private message from ${}`)
+                                          ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:06:21.817Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:11
+  logger.info(`new private message from user: ${user.username} to user: ${}`)
+                                                                          ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:07:11.859Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:16
+  }
+  ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:12:19.434Z [31merror[39m: uncaughtException: Invalid or unexpected token
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:15
+    logger.error('error on handling private message. more details: ${err.message}`)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:19:15.687Z [31merror[39m: uncaughtException: Missing catch or finally after try
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:50
+  }
+  ^
+
+SyntaxError: Missing catch or finally after try
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:19:21.742Z [31merror[39m: uncaughtException: Unexpected token 'const'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:52
+  const { user, group, message } = data
+  ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:19:24.947Z [31merror[39m: uncaughtException: Unexpected token 'const'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\socketController.js:52
+  const { user, group, message } = data
+  ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:2:105)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:22:46.983Z [31merror[39m: uncaughtException: Cannot find module '../ut'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\authenticate.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../ut'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\authenticate.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\authenticate.js:4:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T09:23:47.570Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\authenticate.js:31
+      logger.info(`user: ${} authenticated: ${err.message}`)
+                           ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js:13:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:27:15.623Z [31merror[39m: uncaughtException: Unexpected token 'if'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\socketAuth.js:14
+  if (!io.users) io.users = {}
+  ^^
+
+SyntaxError: Unexpected token 'if'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:3:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:27:35.568Z [31merror[39m: uncaughtException: Unexpected token '.'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\socketAuth.js:13
+  const userExists = await User.findOne({decodedUser.username})
+                                                    ^
+
+SyntaxError: Unexpected token '.'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:3:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:31:51.732Z [31merror[39m: uncaughtException: missing ) after argument list
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\socketAuth.js:11
+    logger.error(''socket auth failed, token not found'')
+                 ^^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:3:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:32:44.031Z [31merror[39m: uncaughtException: Missing initializer in const declaration
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\socketAuth.js:3
+const logger
+      ^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\socketRoutes.js:3:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:53:14.436Z [31merror[39m: uncaughtException: Missing initializer in const declaration
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\CustomError.js:1
+const logger 
+      ^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\register.js:2:21)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-24T09:53:19.083Z [31merror[39m: uncaughtException: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\CustomError.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\register.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\CustomError.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\register.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\CustomError.js:1:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T09:53:24.061Z [31merror[39m: uncaughtException: Cannot find module './'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\CustomError.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\register.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module './'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\CustomError.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\user\register.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\userRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\CustomError.js:1:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T09:54:53.732Z [31merror[39m: uncaughtException: The "id" argument must be of type string. Received undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received undefined
+    at Module.require (node:internal/modules/cjs/loader:1226:3)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\errorHandler.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:10:22)
+2024-06-24T09:54:55.509Z [31merror[39m: uncaughtException: Cannot find module './'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\errorHandler.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module './'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\errorHandler.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\utils\errorHandler.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-24T10:01:56.055Z [31merror[39m: uncaughtException: requi is not defined
+ReferenceError: requi is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js:4:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-06-24T10:01:58.072Z [31merror[39m: uncaughtException: The argument 'id' must be a non-empty string. Received ''
+TypeError [ERR_INVALID_ARG_VALUE]: The argument 'id' must be a non-empty string. Received ''
+    at Module.require (node:internal/modules/cjs/loader:1228:11)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js:4:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-06-24T10:02:01.018Z [31merror[39m: uncaughtException: Cannot find module '..'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '..'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js:4:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-06-24T10:02:02.913Z [31merror[39m: uncaughtException: Cannot find module 'C:\Users\mohammad\Documents\GitHub\SecureChat\server\index.js'. Please verify that the package.json has a valid "main" entry
+Error: Cannot find module 'C:\Users\mohammad\Documents\GitHub\SecureChat\server\index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (node:internal/modules/cjs/loader:445:19)
+    at Module._findPath (node:internal/modules/cjs/loader:716:18)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1131:27)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js:4:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+2024-06-24T10:02:06.630Z [31merror[39m: uncaughtException: Cannot find module './src/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module './src/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js:4:16)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)

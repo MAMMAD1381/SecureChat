@@ -1,8 +1,12 @@
+// utils
 const CustomError = require('../../utils/CustomError')
+const Crypto = require('../../utils/Crypto')
+const logger = require('../../utils/logger')
+const generateKeys = require('../../utils/generateKeys')
+
+// models
 const Group = require('../../models/Group')
 const User = require('../../models/User')
-const generateKeys = require('../../utils/generateKeys')
-const Crypto = require('../../utils/Crypto')
 const Cert = require('../../models/Cert')
 
 const createGroup = async (req, res, next) => {
@@ -51,6 +55,9 @@ const createGroup = async (req, res, next) => {
     await updatedUser.save()
 
     res.status(201).json({ message: 'Group created successfully', group: savedGroup })
+
+    logger.info(`user ${user.username} created a group named ${groupName}`)
+
   } catch (error) {
     return next(new CustomError('Creating group failed', 500, error.message))
   }

@@ -1,0 +1,7 @@
+2024-06-24T09:58:52.162Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-24T10:03:34.869Z [31merror[39m: error on handling group message. more details: Cannot read properties of undefined (reading 'qq')
+2024-06-24T10:03:44.527Z [31merror[39m: Error: this action is restricted to owner only & undefined statusCode: 500
+2024-06-24T10:03:44.528Z [31merror[39m: Error: this action is restricted to owner only
+    at inviteMember (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\inviteMember.js:19:82)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-24T10:04:02.508Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')

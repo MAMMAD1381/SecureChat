@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-
+// controllers
 const getGroups = require('../controllers/group/getGroups')
 const createGroups = require('../controllers/group/createGroup')
 const inviteMember = require('../controllers/group/inviteMember')

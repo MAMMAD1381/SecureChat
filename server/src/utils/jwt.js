@@ -13,7 +13,6 @@ async function jwtDecoder(token) {
 
     return user
   } catch (error) {
-    console.log(error)
     return new CustomError('decoding jwt token failed', 500, error.message)
   }
 }

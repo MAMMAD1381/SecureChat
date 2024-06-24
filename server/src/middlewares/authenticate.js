@@ -1,5 +1,7 @@
+// utils
 const CustomError = require('../utils/CustomError')
 const {jwtDecoder} = require('../utils/jwt')
+const logger = require('../utils/logger')
 
 const authenticate = (method) => {
   return async (req, res, next) => {
@@ -25,6 +27,9 @@ const authenticate = (method) => {
       }
 
       req.user = await jwtDecoder(token)
+
+      logger.info(`user: ${req.user.username} authenticated`)
+      
       next()
     } catch (error) {
       return next(new CustomError('authentication failed', 500, error.message))

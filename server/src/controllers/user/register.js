@@ -1,8 +1,11 @@
-const User = require('../../models/User');
+// utils
 const CustomError = require('../../utils/CustomError')
 const generateKeys = require('../../utils/generateKeys')
 const {generateToken} = require('../../utils/jwt')
+const logger = require('../../utils/logger')
 
+// models
+const User = require('../../models/User');
 
 const registerUser = async (req, res, next) => {
 
@@ -34,6 +37,9 @@ const registerUser = async (req, res, next) => {
         });
 
         res.status(201).json({message: 'user registered successfully', user, privateKey, token});
+
+        logger.info(`user: ${username} registered`)
+
     } catch (error) {
         return next(new CustomError('registration failed', 500, error.message))
     }

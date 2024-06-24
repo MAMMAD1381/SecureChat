@@ -1,6 +1,10 @@
-const User = require('../../models/User');
+// utils
 const CustomError = require('../../utils/CustomError')
 const {generateToken} = require('../../utils/jwt')
+const logger = require('../../utils/logger')
+
+// models
+const User = require('../../models/User');
 
 const loginUser = async (req, res, next) => {
     const { username, password } = req.body;
@@ -20,6 +24,8 @@ const loginUser = async (req, res, next) => {
             sameSite: 'Strict' // Adjust according to your needs ('Strict', 'Lax', 'None')
         });
         res.status(200).json({message: 'login successful', user, token})
+
+        logger.info(`user ${username} logged in`)
 
     } catch (error) {
         return next(new CustomError('Login failed', 500, error.message))

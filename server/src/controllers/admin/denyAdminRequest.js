@@ -1,6 +1,9 @@
-const User = require('../../models/User')
-const RequestAdmin = require('../../models/RequestAdmin')
+// utils
 const CustomError = require('../../utils/CustomError')
+const logger = require('../../utils/logger')
+
+// models
+const RequestAdmin = require('../../models/RequestAdmin')
 
 const denyAdminRequest = async (req, res, next) => {
   try {
@@ -19,6 +22,8 @@ const denyAdminRequest = async (req, res, next) => {
     res.status(200).json({
       message: 'admin request rejected successfully',
     })
+
+    logger.info(`admin request of ${username} was denied by ${user.username}`)
   } catch (error) {
     next(new CustomError('rejecting admin request failed', 500, error.message))
   }

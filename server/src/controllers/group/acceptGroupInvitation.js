@@ -1,5 +1,9 @@
-const User = require('../../models/User')
+// utils
 const CustomError = require('../../utils/CustomError')
+const logger = require('../../utils/logger')
+
+// models
+const User = require('../../models/User')
 const Group = require('../../models/Group')
 const GroupInvitation = require('../../models/GroupInvitation')
 
@@ -25,6 +29,9 @@ const removeMember = async (req, res, next) => {
     await group.save()
 
     res.status(200).json({ message: 'success accepting invitation', invitation })
+    
+    logger.info(`invitation to group: ${groupName} was accepted by ${user.username}`)
+
   } catch (error) {
     next(new CustomError('accepting invitation failed', 500, error.message))
   }

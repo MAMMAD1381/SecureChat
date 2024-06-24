@@ -1,19 +1,31 @@
-// src/middleware/authMiddleware.js
+// utils
 const {jwtDecoder} = require('../utils/jwt')
+// const CustomError = require('../utils/CustomError');
+const logger = require('../utils/logger')
+
+// models
 const User = require('../models/User');
-const CustomError = require('../utils/CustomError');
 
 const socketAuth = (io) => async (socket, next) => {
   const token = socket.handshake.auth.token
-  // console.log('token', token)
-  if (!token) return next(new CustomError('socket auth failed, token not found', 400))
+  if (!token){
+    logger.error('socket auth failed, token not found')
+    return
+  } 
 
   const decodedUser = await jwtDecoder(token)
+
+  const userExists = await User.findOne({username: decodedUser.username})
+  if (!userExists) {
+    logger.error('user not found')
+    return
+  }
 
   if (!io.users) io.users = {}
   io.users[decodedUser.username] = socket
   socket.user = decodedUser
-  console.log(`${decodedUser.username}, ${socket.id} user authenticated`)
+
+  logger.info(`user: ${socket.user.username} authenticated over socket connection`)
   
   next()
 };

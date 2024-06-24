@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+// controllers
 const registerUser = require('../controllers/user/register')
 const loginUser = require('../controllers/user/login')
 const getUserPublicKey = require('../controllers/user/publicKey')
 const getUsers = require('../controllers/user/users')
 const getProfile = require('../controllers/user/getProfile')
-
 const requestAdmin = require('../controllers/admin/requestAdmin')
 
 // middlewares

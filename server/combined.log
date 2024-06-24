@@ -1,0 +1,234 @@
+2024-06-24T09:52:13.511Z [32minfo[39m: MongoDB connected
+2024-06-24T09:52:25.930Z [32minfo[39m: MongoDB connected
+2024-06-24T09:52:28.171Z [32minfo[39m: MongoDB connected
+2024-06-24T09:52:29.430Z [32minfo[39m: MongoDB connected
+2024-06-24T09:52:32.040Z [32minfo[39m: MongoDB connected
+2024-06-24T09:52:53.834Z [32minfo[39m: MongoDB connected
+2024-06-24T09:53:01.735Z [32minfo[39m: MongoDB connected
+2024-06-24T09:53:03.608Z [32minfo[39m: MongoDB connected
+2024-06-24T09:53:06.320Z [32minfo[39m: MongoDB connected
+2024-06-24T09:53:08.901Z [32minfo[39m: MongoDB connected
+2024-06-24T09:53:26.458Z [32minfo[39m: MongoDB connected
+2024-06-24T09:53:30.196Z [32minfo[39m: MongoDB connected
+2024-06-24T09:53:33.804Z [32minfo[39m: MongoDB connected
+2024-06-24T09:53:36.254Z [32minfo[39m: MongoDB connected
+2024-06-24T09:53:52.326Z [32minfo[39m: MongoDB connected
+2024-06-24T09:54:02.438Z [32minfo[39m: MongoDB connected
+2024-06-24T09:54:07.089Z [32minfo[39m: MongoDB connected
+2024-06-24T09:54:22.059Z [32minfo[39m: MongoDB connected
+2024-06-24T09:54:23.628Z [32minfo[39m: MongoDB connected
+2024-06-24T09:54:26.478Z [32minfo[39m: MongoDB connected
+2024-06-24T09:54:37.965Z [32minfo[39m: MongoDB connected
+2024-06-24T09:54:39.974Z [32minfo[39m: MongoDB connected
+2024-06-24T09:54:43.343Z [32minfo[39m: MongoDB connected
+2024-06-24T09:54:58.142Z [32minfo[39m: MongoDB connected
+2024-06-24T09:55:18.254Z [32minfo[39m: MongoDB connected
+2024-06-24T09:55:21.366Z [32minfo[39m: MongoDB connected
+2024-06-24T09:55:37.703Z [32minfo[39m: MongoDB connected
+2024-06-24T09:58:33.323Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.324Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.330Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:58:33.337Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.338Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.342Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:58:33.362Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.363Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.376Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:58:33.389Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.389Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.399Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.400Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.403Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.404Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.407Z [32minfo[39m: user: asda requested all users
+2024-06-24T09:58:33.413Z [32minfo[39m: super admin asda request all groups
+2024-06-24T09:58:33.415Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:58:33.424Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.425Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.428Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.428Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.430Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.430Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.432Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.433Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.435Z [32minfo[39m: user: asda requested all users
+2024-06-24T09:58:33.437Z [32minfo[39m: admin requests was requested by asda
+2024-06-24T09:58:33.439Z [32minfo[39m: user asda requested it's group invitations
+2024-06-24T09:58:33.441Z [32minfo[39m: super admin asda request all groups
+2024-06-24T09:58:33.449Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.450Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.452Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.452Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.455Z [32minfo[39m: admin requests was requested by asda
+2024-06-24T09:58:33.457Z [32minfo[39m: user asda requested it's group invitations
+2024-06-24T09:58:33.466Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.466Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.470Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:58:33.475Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:58:33.476Z [32minfo[39m: user: asda authorized
+2024-06-24T09:58:33.479Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:58:52.162Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-24T09:58:52.179Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.180Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.183Z [32minfo[39m: user: qq requested it's profile
+2024-06-24T09:58:52.189Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.190Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.196Z [32minfo[39m: user: qq requested it's profile
+2024-06-24T09:58:52.206Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.209Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.221Z [32minfo[39m: user: qq requested it's profile
+2024-06-24T09:58:52.223Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.224Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.235Z [32minfo[39m: user: qq requested all users
+2024-06-24T09:58:52.237Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.238Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.241Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.242Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.246Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.246Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.253Z [32minfo[39m: user qq requested it's group invitations
+2024-06-24T09:58:52.256Z [32minfo[39m: user: qq requested it's profile
+2024-06-24T09:58:52.257Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.257Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.262Z [32minfo[39m: user: undefined requested it's joined groups
+2024-06-24T09:58:52.266Z [32minfo[39m: user: qq requested all users
+2024-06-24T09:58:52.270Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.270Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.272Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.273Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.274Z [32minfo[39m: user qq requested it's group invitations
+2024-06-24T09:58:52.283Z [32minfo[39m: user: undefined requested it's joined groups
+2024-06-24T09:58:52.285Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.285Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.289Z [32minfo[39m: user: qq requested it's profile
+2024-06-24T09:58:52.294Z [32minfo[39m: user: qq authenticated
+2024-06-24T09:58:52.295Z [32minfo[39m: user: qq authorized
+2024-06-24T09:58:52.298Z [32minfo[39m: user: qq requested it's profile
+2024-06-24T09:59:14.755Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.756Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.759Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:59:14.765Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.766Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.770Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:59:14.790Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.791Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.793Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:59:14.800Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.800Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.807Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:59:14.817Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.818Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.820Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.820Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.822Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.823Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.827Z [32minfo[39m: user: asda requested all users
+2024-06-24T09:59:14.829Z [32minfo[39m: super admin asda request all groups
+2024-06-24T09:59:14.831Z [32minfo[39m: admin requests was requested by asda
+2024-06-24T09:59:14.833Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.833Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.843Z [32minfo[39m: user asda requested it's group invitations
+2024-06-24T09:59:14.844Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.844Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.847Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.847Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.849Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.850Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.854Z [32minfo[39m: user: asda requested all users
+2024-06-24T09:59:14.856Z [32minfo[39m: super admin asda request all groups
+2024-06-24T09:59:14.857Z [32minfo[39m: admin requests was requested by asda
+2024-06-24T09:59:14.859Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.860Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.865Z [32minfo[39m: user asda requested it's group invitations
+2024-06-24T09:59:14.867Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.867Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.871Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:59:14.875Z [32minfo[39m: user: asda authenticated
+2024-06-24T09:59:14.876Z [32minfo[39m: user: asda authorized
+2024-06-24T09:59:14.879Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T09:59:40.096Z [32minfo[39m: MongoDB connected
+2024-06-24T10:00:02.701Z [32minfo[39m: MongoDB connected
+2024-06-24T10:00:10.888Z [32minfo[39m: MongoDB connected
+2024-06-24T10:00:22.779Z [32minfo[39m: MongoDB connected
+2024-06-24T10:00:40.915Z [32minfo[39m: MongoDB connected
+2024-06-24T10:00:52.445Z [32minfo[39m: MongoDB connected
+2024-06-24T10:00:55.804Z [32minfo[39m: MongoDB connected
+2024-06-24T10:01:00.658Z [32minfo[39m: MongoDB connected
+2024-06-24T10:01:06.114Z [32minfo[39m: MongoDB connected
+2024-06-24T10:01:10.010Z [32minfo[39m: MongoDB connected
+2024-06-24T10:01:14.656Z [32minfo[39m: MongoDB connected
+2024-06-24T10:01:34.568Z [32minfo[39m: MongoDB connected
+2024-06-24T10:01:38.404Z [32minfo[39m: MongoDB connected
+2024-06-24T10:01:43.736Z [32minfo[39m: MongoDB connected
+2024-06-24T10:02:10.304Z [32minfo[39m: MongoDB connected
+2024-06-24T10:02:24.482Z [32minfo[39m: MongoDB connected
+2024-06-24T10:02:28.871Z [32minfo[39m: Socket server is running on port 4000
+2024-06-24T10:02:28.896Z [32minfo[39m: MongoDB connected
+2024-06-24T10:02:35.064Z [32minfo[39m: Socket server is running on port 4000
+2024-06-24T10:02:35.066Z [32minfo[39m: Express server running on port 5000
+2024-06-24T10:02:35.082Z [32minfo[39m: MongoDB connected
+2024-06-24T10:03:26.229Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:03:26.230Z [32minfo[39m: user: asda authorized
+2024-06-24T10:03:26.237Z [32minfo[39m: user: asda requested all users
+2024-06-24T10:03:26.244Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:03:26.244Z [32minfo[39m: user: asda authorized
+2024-06-24T10:03:26.248Z [32minfo[39m: user: asda requested all users
+2024-06-24T10:03:34.869Z [31merror[39m: error on handling group message. more details: Cannot read properties of undefined (reading 'qq')
+2024-06-24T10:03:44.524Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:03:44.525Z [32minfo[39m: user: asda authorized
+2024-06-24T10:03:44.527Z [31merror[39m: Error: this action is restricted to owner only & undefined statusCode: 500
+2024-06-24T10:03:44.528Z [31merror[39m: Error: this action is restricted to owner only
+    at inviteMember (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\inviteMember.js:19:82)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-24T10:04:02.508Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-24T10:04:02.522Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.522Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.525Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T10:04:02.530Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.530Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.535Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T10:04:02.546Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.546Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.553Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T10:04:02.569Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.569Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.571Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.572Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.574Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.574Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.576Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.576Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.579Z [32minfo[39m: user: asda requested all users
+2024-06-24T10:04:02.582Z [32minfo[39m: super admin asda request all groups
+2024-06-24T10:04:02.584Z [32minfo[39m: admin requests was requested by asda
+2024-06-24T10:04:02.585Z [32minfo[39m: user asda requested it's group invitations
+2024-06-24T10:04:02.598Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.598Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.600Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.600Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.602Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.603Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.605Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.606Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.607Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.608Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.610Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T10:04:02.612Z [32minfo[39m: user: asda requested all users
+2024-06-24T10:04:02.614Z [32minfo[39m: super admin asda request all groups
+2024-06-24T10:04:02.616Z [32minfo[39m: admin requests was requested by asda
+2024-06-24T10:04:02.618Z [32minfo[39m: user asda requested it's group invitations
+2024-06-24T10:04:02.623Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.623Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.626Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T10:04:02.630Z [32minfo[39m: user: asda authenticated
+2024-06-24T10:04:02.631Z [32minfo[39m: user: asda authorized
+2024-06-24T10:04:02.633Z [32minfo[39m: user: asda requested it's profile
+2024-06-24T10:04:07.364Z [32minfo[39m: user: qq authenticated
+2024-06-24T10:04:07.365Z [32minfo[39m: user: qq authorized
+2024-06-24T10:04:07.367Z [32minfo[39m: user: qq requested all users
+2024-06-24T10:04:07.378Z [32minfo[39m: user: qq authenticated
+2024-06-24T10:04:07.378Z [32minfo[39m: user: qq authorized
+2024-06-24T10:04:07.381Z [32minfo[39m: user: qq authenticated over socket connection
+2024-06-24T10:04:07.384Z [32minfo[39m: user: qq requested all users
+2024-06-24T10:04:10.135Z [32minfo[39m: new group message from user: qq to group: test
+2024-06-24T10:04:10.136Z [32minfo[39m: user: qq joined group

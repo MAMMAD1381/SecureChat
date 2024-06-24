@@ -1,5 +1,9 @@
-const User = require('../../models/User')
+// utils
 const CustomError = require('../../utils/CustomError')
+const logger = require('../../utils/logger')
+
+// models
+const User = require('../../models/User')
 const Group = require('../../models/Group')
 const Cert = require('../../models/Cert')
 
@@ -28,6 +32,8 @@ const deleteGroup = async (req, res, next) => {
 
     res.status(200).json({message: 'success deleting group'})
     
+    logger.info(`group: ${groupName} was deleted by ${user.username}`)
+
   } catch (error) {
     next(new CustomError('removing group failed', 500, error.message))
   }

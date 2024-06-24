@@ -1,6 +1,9 @@
-const User = require('../../models/User');
-const RequestAdmin = require('../../models/RequestAdmin');
+// utils
 const CustomError = require('../../utils/CustomError');
+const logger = require('../../utils/logger')
+
+// models
+const RequestAdmin = require('../../models/RequestAdmin');
 
 const requestAdmin = async (req, res, next) => {
   try {
@@ -27,6 +30,9 @@ const requestAdmin = async (req, res, next) => {
       message: 'Admin request created successfully',
       request: newRequest
     });
+
+    logger.info(`user: ${username} requested admin role`)
+
   } catch (error) {
     next(new CustomError('Failed to create admin request', 500, error.message));
   }
