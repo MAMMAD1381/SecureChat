@@ -187,6 +187,82 @@ async function getGroupCert(cert) {
   }
 }
 
+async function createPoll(groupName, question, options) {
+  const token = LocalStorage.get('token')
+  const response = await axios.post(
+    `${configs.SERVER_URL}/api/poll/create`,
+    { groupName, question, options },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      withCredentials: true,
+    }
+  )
+
+  if (response.status === 200) {
+    return 'success'
+  }
+}
+
+async function getPolls(groupName) {
+  const token = LocalStorage.get('token')
+  const response = await axios.get(
+    `${configs.SERVER_URL}/api/poll/group/${groupName}`,
+    // { cert },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      withCredentials: true,
+    }
+  )
+
+  if (response.status === 200) {
+    return response.data.polls
+  }
+}
+
+async function registerVote(groupName, pollId, vote) {
+  const token = LocalStorage.get('token')
+  const response = await axios.post(
+    `${configs.SERVER_URL}/api/poll/group/${groupName}/vote`,
+    { pollId, vote },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      withCredentials: true,
+    }
+  )
+
+  if (response.status === 200) {
+    return 'success'
+  }
+}
+
+async function getPollsCert(certId) {
+  const token = LocalStorage.get('token')
+  const response = await axios.get(
+    `${configs.SERVER_URL}/api/poll/cert/${certId}`,
+    // { cert },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      withCredentials: true,
+    }
+  )
+
+  if (response.status === 200) {
+    return response.data.cert
+  }
+}
+
 export {
   deleteGroup,
   createGroup,
@@ -198,5 +274,9 @@ export {
   denyInvitation,
   getGroupInvitations,
   getAllGroups,
-  getGroupCert
+  getGroupCert,
+  createPoll,
+  getPolls,
+  getPollsCert,
+  registerVote
 }

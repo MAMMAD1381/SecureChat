@@ -6,7 +6,7 @@ const logger = require('../../utils/logger')
 const Group = require('../../models/Group')
 const Poll = require('../../models/Poll')
 
-const createGroup = async (req, res, next) => {
+const getPolls = async (req, res, next) => {
   try {
     const user = req.user
     // const { groupName, question, options } = req.body
@@ -17,7 +17,7 @@ const createGroup = async (req, res, next) => {
 
     if(!group.members.includes(user.username)) return next(new CustomError("you are not a member of this group", 403))
 
-    const polls = Promise.all(group.polls.map(async(poll) => {
+    const polls = await Promise.all(group.polls.map(async(poll) => {
       return await Poll.findById(poll)
     }))
 
@@ -32,4 +32,4 @@ const createGroup = async (req, res, next) => {
   }
 }
 
-module.exports = createGroup
+module.exports = getPolls

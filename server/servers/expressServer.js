@@ -5,6 +5,7 @@ const cors = require('cors')
 const userRoutes = require('../src/routes/userRoutes')
 const groupRoutes = require('../src/routes/groupRoutes')
 const adminRoutes = require('../src/routes/adminRoutes')
+const pollRoutes = require('../src/routes/pollRoutes')
 
 // server middlewares
 const errorHandler = require('../src/utils/errorHandler')
@@ -39,6 +40,7 @@ function initializeExpressServer(allowedOrigins) {
   app.use('/api/user', userRoutes)
   app.use('/api/group', groupRoutes)
   app.use('/api/admin', adminRoutes)
+  app.use('/api/poll', pollRoutes)
 
   // add error handler
   app.use(errorHandler)

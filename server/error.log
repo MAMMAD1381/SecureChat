@@ -5,3 +5,28 @@
     at inviteMember (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\inviteMember.js:19:82)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 2024-06-24T10:04:02.508Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T02:42:26.952Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T03:36:44.272Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T05:14:03.542Z [31merror[39m: Error: Missing required fields: groupName & undefined statusCode: 500
+2024-06-30T05:14:03.542Z [31merror[39m: Error: Missing required fields: groupName
+    at C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\checkFields.js:8:25
+    at Layer.handle [as handle_request] (C:\Users\mohammad\Documents\GitHub\SecureChat\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\mohammad\Documents\GitHub\SecureChat\server\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\authenticate.js:33:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T05:15:20.140Z [31merror[39m: Error: Missing required fields: groupName & undefined statusCode: 500
+2024-06-30T05:15:20.141Z [31merror[39m: Error: Missing required fields: groupName
+    at C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\checkFields.js:8:25
+    at Layer.handle [as handle_request] (C:\Users\mohammad\Documents\GitHub\SecureChat\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\mohammad\Documents\GitHub\SecureChat\server\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\authenticate.js:33:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T05:16:04.711Z [31merror[39m: Error: Creating poll failed & Poll validation failed: expiresAt: Path `expiresAt` is required., group: Path `group` is required., createdBy: Path `createdBy` is required. statusCode: 500
+2024-06-30T05:16:04.711Z [31merror[39m: Error: Creating poll failed
+    at createPoll (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\createPoll.js:34:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T05:20:53.110Z [31merror[39m: Error: Creating poll failed & Poll validation failed: group: Path `group` is required., createdBy: Path `createdBy` is required. statusCode: 500
+2024-06-30T05:20:53.111Z [31merror[39m: Error: Creating poll failed
+    at createPoll (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\createPoll.js:34:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T05:22:21.016Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')

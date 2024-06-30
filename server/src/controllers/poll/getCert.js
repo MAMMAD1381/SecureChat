@@ -5,7 +5,7 @@ const logger = require('../../utils/logger')
 // models
 const Cert = require('../../models/Cert')
 
-const createGroup = async (req, res, next) => {
+const getCert = async (req, res, next) => {
   try {
     const user = req.user
     const {certId} = req.params
@@ -21,4 +21,4 @@ const createGroup = async (req, res, next) => {
   }
 }
 
-module.exports = createGroup
+module.exports = getCert

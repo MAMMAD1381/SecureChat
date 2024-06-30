@@ -7,7 +7,7 @@ const Group = require('../../models/Group')
 const Poll = require('../../models/Poll')
 const Cert = require('../../models/Cert')
 
-const createGroup = async (req, res, next) => {
+const createPoll = async (req, res, next) => {
   try {
     const user = req.user
     const { groupName, question, options } = req.body
@@ -20,7 +20,7 @@ const createGroup = async (req, res, next) => {
     const cert = await Cert.findOne({name: groupName})
     if(!cert) return next(new CustomError("having certificate for group is needed to create polls", 403))
 
-    let poll = new Poll({question, cert:cert._id, options: options.map(option => {return {optionText: option}})})
+    let poll = new Poll({question,createdBy:user.username, group:groupName,  cert:cert._id, options: options.map(option => {return {optionText: option}})})
     poll = await poll.save()
 
     group.polls.push(poll._id)
@@ -35,4 +35,4 @@ const createGroup = async (req, res, next) => {
   }
 }
 
-module.exports = createGroup
+module.exports = createPoll

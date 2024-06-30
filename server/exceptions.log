@@ -1044,3 +1044,953 @@ Require stack:
     at Module.load (node:internal/modules/cjs/loader:1208:32)
     at Module._load (node:internal/modules/cjs/loader:1024:12)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-06-30T03:28:02.008Z [31merror[39m: uncaughtException: Missing initializer in const declaration
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8
+const pollR
+      ^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js:7:33)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:28:04.163Z [31merror[39m: uncaughtException: Missing initializer in const declaration
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8
+const pollRoutes
+      ^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js:7:33)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:28:11.271Z [31merror[39m: uncaughtException: Cannot find module '../src/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../src/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-30T03:28:15.429Z [31merror[39m: uncaughtException: getGroups is not defined
+ReferenceError: getGroups is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:12:79)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:28:20.769Z [31merror[39m: uncaughtException: getGroups is not defined
+ReferenceError: getGroups is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:12:79)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:28:58.599Z [31merror[39m: uncaughtException: creat is not defined
+ReferenceError: creat is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:28:59.700Z [31merror[39m: uncaughtException: create is not defined
+ReferenceError: create is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:29:03.295Z [31merror[39m: uncaughtException: Unexpected token 'const'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8
+const authenticate = require('../middlewares/authenticate')
+^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:31:47.976Z [31merror[39m: uncaughtException: Unexpected token 'const'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8
+const authenticate = require('../middlewares/authenticate')
+^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:32:06.179Z [31merror[39m: uncaughtException: Cannot access 'createPoll' before initialization
+ReferenceError: Cannot access 'createPoll' before initialization
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:32:10.110Z [31merror[39m: uncaughtException: Cannot use import statement outside a module
+C:\Users\mohammad\Documents\GitHub\SecureChat\client\src\controllers\group.js:3
+import axios from 'axios'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:11:24)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:32:19.425Z [31merror[39m: uncaughtException: Cannot use import statement outside a module
+C:\Users\mohammad\Documents\GitHub\SecureChat\client\src\controllers\group.js:3
+import axios from 'axios'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:11:24)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:32:27.363Z [31merror[39m: uncaughtException: Cannot use import statement outside a module
+C:\Users\mohammad\Documents\GitHub\SecureChat\client\src\controllers\group.js:3
+import axios from 'axios'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:11:24)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:32:36.703Z [31merror[39m: uncaughtException: Cannot use import statement outside a module
+C:\Users\mohammad\Documents\GitHub\SecureChat\client\src\controllers\group.js:3
+import axios from 'axios'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:11:24)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:32:51.120Z [31merror[39m: uncaughtException: createPoll is not defined
+ReferenceError: createPoll is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:32:57.180Z [31merror[39m: uncaughtException: create is not defined
+ReferenceError: create is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:32:58.980Z [31merror[39m: uncaughtException: createPol is not defined
+ReferenceError: createPol is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:33:15.365Z [31merror[39m: uncaughtException: Cannot find module '../controllers/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../controllers/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-30T03:33:17.798Z [31merror[39m: uncaughtException: Cannot find module '../controllers/poll/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../controllers/poll/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-30T03:33:18.990Z [31merror[39m: uncaughtException: getGroups is not defined
+ReferenceError: getGroups is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:12:79)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:33:20.404Z [31merror[39m: uncaughtException: Identifier 'createPoll' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:6
+const createPoll = require('../controllers/poll/createPoll')
+      ^
+
+SyntaxError: Identifier 'createPoll' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:33:26.065Z [31merror[39m: uncaughtException: Identifier 'createPoll' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7
+const createPoll = require('../controllers/poll/createPoll')
+      ^
+
+SyntaxError: Identifier 'createPoll' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:33:31.162Z [31merror[39m: uncaughtException: getGroups is not defined
+ReferenceError: getGroups is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:14:79)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:33:38.842Z [31merror[39m: uncaughtException: getAllGroups is not defined
+ReferenceError: getAllGroups is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:15:96)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:33:41.515Z [31merror[39m: uncaughtException: get is not defined
+ReferenceError: get is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:15:96)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:33:45.141Z [31merror[39m: uncaughtException: getGroupCert is not defined
+ReferenceError: getGroupCert is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:16:90)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:34:05.052Z [31merror[39m: uncaughtException: missing ) after argument list
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:14
+router.post('/create', authenticate('Bearer'), checkFields authorize(['admin', 'super']), createPoll);
+                                               ^^^^^^^^^^^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:34:05.936Z [31merror[39m: uncaughtException: missing ) after argument list
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:14
+router.post('/create', authenticate('Bearer'), checkFields() authorize(['admin', 'super']), createPoll);
+                                                           ^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:34:10.439Z [31merror[39m: uncaughtException: groupName is not defined
+ReferenceError: groupName is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:14:61)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:34:13.878Z [31merror[39m: uncaughtException: groupName is not defined
+ReferenceError: groupName is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:14:61)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T03:34:16.024Z [31merror[39m: uncaughtException: groupName is not defined
+ReferenceError: groupName is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:14:61)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:21:46.193Z [31merror[39m: uncaughtException: Unexpected token ','
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\createPoll.js:23
+    let poll = new Poll({question,,  cert:cert._id, options: options.map(option => {return {optionText: option}})})
+                                  ^
+
+SyntaxError: Unexpected token ','
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:21:53.030Z [31merror[39m: uncaughtException: Unexpected token ','
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\createPoll.js:23
+    let poll = new Poll({question,createdBy:,  cert:cert._id, options: options.map(option => {return {optionText: option}})})
+                                            ^
+
+SyntaxError: Unexpected token ','
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:22:01.292Z [31merror[39m: uncaughtException: Unexpected token ','
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\createPoll.js:23
+    let poll = new Poll({question,createdBy:user.username, ,  cert:cert._id, options: options.map(option => {return {optionText: option}})})
+                                                           ^
+
+SyntaxError: Unexpected token ','
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:5:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:33:11.840Z [31merror[39m: uncaughtException: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-30T05:33:15.469Z [31merror[39m: uncaughtException: Cannot find module '../controllers/poll/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+Error: Cannot find module '../controllers/poll/'
+Require stack:
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js
+- C:\Users\mohammad\Documents\GitHub\SecureChat\server\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+    at Module._load (node:internal/modules/cjs/loader:986:27)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+2024-06-30T05:33:20.370Z [31merror[39m: uncaughtException: reg is not defined
+ReferenceError: reg is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:17:102)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:33:40.191Z [31merror[39m: uncaughtException: missing ) after argument list
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:17
+router.post('/group/:groupName/vote', authenticate('Bearer'), checkFields authorize(['user', 'admin', 'super']), registerVote);
+                                                              ^^^^^^^^^^^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:33:41.305Z [31merror[39m: uncaughtException: missing ) after argument list
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:17
+router.post('/group/:groupName/vote', authenticate('Bearer'), checkFields() authorize(['user', 'admin', 'super']), registerVote);
+                                                                          ^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:33:42.513Z [31merror[39m: uncaughtException: missing ) after argument list
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:17
+router.post('/group/:groupName/vote', authenticate('Bearer'), checkFields([]) authorize(['user', 'admin', 'super']), registerVote);
+                                                                            ^
+
+SyntaxError: missing ) after argument list
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:33:46.089Z [31merror[39m: uncaughtException: pollId is not defined
+ReferenceError: pollId is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:17:76)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:33:47.814Z [31merror[39m: uncaughtException: pollId is not defined
+ReferenceError: pollId is not defined
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:17:76)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\servers\expressServer.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:36:52.237Z [31merror[39m: uncaughtException: Unexpected token 'if'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:20
+    if (!group.members.includes(user.username))
+    ^^
+
+SyntaxError: Unexpected token 'if'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:36:55.623Z [31merror[39m: uncaughtException: Unexpected token 'if'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:20
+    if (!group.members.includes(user.username))
+    ^^
+
+SyntaxError: Unexpected token 'if'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:36:56.574Z [31merror[39m: uncaughtException: Unexpected token ')'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:18
+    if()
+       ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:37:06.073Z [31merror[39m: uncaughtException: Unexpected token ')'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:18
+    if(groupName !== )
+                     ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:37:12.608Z [31merror[39m: uncaughtException: Unexpected token ')'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:23
+  if(groupName !== )
+                   ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:37:26.832Z [31merror[39m: uncaughtException: Lexical declaration cannot appear in a single-statement context
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:24
+    let isVoted = false
+    ^^^
+
+SyntaxError: Lexical declaration cannot appear in a single-statement context
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:37:29.958Z [31merror[39m: uncaughtException: Lexical declaration cannot appear in a single-statement context
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:24
+    let isVoted = false
+    ^^^
+
+SyntaxError: Lexical declaration cannot appear in a single-statement context
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:37:32.172Z [31merror[39m: uncaughtException: Lexical declaration cannot appear in a single-statement context
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:24
+    let isVoted = false
+    ^^^
+
+SyntaxError: Lexical declaration cannot appear in a single-statement context
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:37:54.569Z [31merror[39m: uncaughtException: Invalid or unexpected token
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:23
+  if(groupName !== poll.group)  return next(new CustomError(', 403))
+                                                            ^^^^^^^^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:49:35.913Z [31merror[39m: uncaughtException: Identifier 'pollOptionSchema' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\models\Poll.js:9
+const pollOptionSchema = new Schema({
+      ^
+
+SyntaxError: Identifier 'pollOptionSchema' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\createPoll.js:7:14)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:49:37.690Z [31merror[39m: uncaughtException: Identifier 'pollOptionSchema' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\models\Poll.js:9
+const pollOptionSchema = new Schema({
+      ^
+
+SyntaxError: Identifier 'pollOptionSchema' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\createPoll.js:7:14)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T05:53:00.282Z [31merror[39m: uncaughtException: Unexpected token ')'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+        option.votes.some(vote => vote.votedBy === )
+                                                   ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T06:06:42.364Z [31merror[39m: uncaughtException: Unexpected token ')'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:21
+      if()
+         ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T06:06:43.717Z [31merror[39m: uncaughtException: Unexpected token ')'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:22
+    if()
+       ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T06:06:46.451Z [31merror[39m: uncaughtException: Unexpected token ')'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:22
+    if()
+       ^
+
+SyntaxError: Unexpected token ')'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T06:06:50.941Z [31merror[39m: uncaughtException: Identifier 'poll' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:21
+      const poll = await Poll.findById(poll)
+            ^
+
+SyntaxError: Identifier 'poll' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T06:06:52.300Z [31merror[39m: uncaughtException: Identifier 'poll' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:21
+      const poll = await Poll.findById(poll)
+            ^
+
+SyntaxError: Identifier 'poll' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T06:06:54.736Z [31merror[39m: uncaughtException: Identifier 'poll' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:21
+      const poll = await Poll.findById(poll)
+            ^
+
+SyntaxError: Identifier 'poll' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T06:06:58.499Z [31merror[39m: uncaughtException: Identifier 'poll' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:21
+      const poll = await Poll.findById(poll)
+            ^
+
+SyntaxError: Identifier 'poll' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T06:07:00.153Z [31merror[39m: uncaughtException: Identifier 'poll' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:21
+      const poll = await Poll.findById(poll)
+            ^
+
+SyntaxError: Identifier 'poll' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T06:07:37.351Z [31merror[39m: uncaughtException: Unexpected token '!'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:22
+      if(p && p!) return p
+               ^
+
+SyntaxError: Unexpected token '!'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
