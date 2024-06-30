@@ -3,9 +3,10 @@ const mongoose = require('mongoose');
 const groupSchema = new mongoose.Schema({
     name: { type: String, required: true, unique: true },
     description: { type: String },
-    members: [{ type: String, required: true }], // Array of memberSchema
+    members: [{ type: String, required: true }],
     owner: { type: String, required: true },
-    cert: { type: mongoose.Schema.Types.ObjectId, ref: 'Cert', required: true } // Reference to Cert model
+    polls:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Poll'}],
+    cert: { type: mongoose.Schema.Types.ObjectId, ref: 'Cert', required: true }
 });
 
 const Group = mongoose.model('Group', groupSchema);
