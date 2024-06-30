@@ -144,20 +144,8 @@ const GroupChat = () => {
         showMessage('Vote recorded', 'info')
       }
     } catch (err) {
-      showMessage('voting failed', 'danger')
+      showMessage(`voting failed. error details: ${err.message}`, 'danger')
     }
-    // setPolls((prevPolls) =>
-    //   prevPolls.map((poll) =>
-    //     poll.id === pollId
-    //       ? {
-    //           ...poll,
-    //           options: poll.options.map((option) =>
-    //             option.id === optionId ? { ...option, votes: option.votes + 1 } : option
-    //           ),
-    //         }
-    //       : poll
-    //   )
-    // );
   }
 
   const handleCreatePoll = async ({ question, options }) => {
@@ -165,33 +153,12 @@ const GroupChat = () => {
       const result = await createPoll(group.name, question, options)
 
       if (result) {
-        // const newPoll = {
-        //   // id: String(polls.length + 1),
-        //   question,
-        //   options: options.map((optionText, index) => ({
-        //     id: String(index + 1),
-        //     optionText,
-        //     votes: 0,
-        //   })),
-        // };
-        // setPolls((prevPolls) => [...prevPolls, newPoll]);
         await refreshPolls()
         showMessage('Poll created', 'info')
       }
     } catch (err) {
-      showMessage('creating poll failed', 'danger')
+      showMessage(`creating poll failed. more details: ${err.message}`, 'danger')
     }
-    // const newPoll = {
-    //   id: String(polls.length + 1),
-    //   question,
-    //   options: options.map((optionText, index) => ({
-    //     id: String(index + 1),
-    //     optionText,
-    //     votes: 0,
-    //   })),
-    // };
-    // setPolls((prevPolls) => [...prevPolls, newPoll]);
-    // showMessage('Poll created', 'info');
   }
 
   return (

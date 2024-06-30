@@ -1994,3 +1994,291 @@ SyntaxError: Unexpected token '!'
     at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:7:18)
     at Module._compile (node:internal/modules/cjs/loader:1358:14)
     at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:29:18.164Z [31merror[39m: uncaughtException: Unexpected token '}'
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:32
+        const vote = new Vote({votedBy: })
+                                        ^
+
+SyntaxError: Unexpected token '}'
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:33:55.406Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = 
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:33:59.056Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await 
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:34:21.419Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:34:26.048Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findById()
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:34:37.083Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:34:38.490Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({})
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:34:44.965Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({vo})
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:34:47.118Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({voted})
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:35:09.932Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({votedBy: })
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:35:14.826Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({votedBy: user.username})
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:35:26.883Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({votedBy: user.username, poll: poll})
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:35:30.094Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({votedBy: user.username, poll: poll._id})
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:35:35.928Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({votedBy: user.username, poll: poll._id})
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:35:37.097Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({votedBy: user.username, poll: poll._id})
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:35:39.388Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({votedBy: user.username, poll: poll._id})
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:35:46.168Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28
+    const isVoted = await vote.findOne({votedBy: user.username, poll: poll._id})
+          ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-06-30T12:37:05.235Z [31merror[39m: uncaughtException: Identifier 'isVoted' has already been declared
+C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:29
+    let isVoted = false
+        ^
+
+SyntaxError: Identifier 'isVoted' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\routes\pollRoutes.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)

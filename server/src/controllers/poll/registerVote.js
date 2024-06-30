@@ -5,6 +5,7 @@ const logger = require('../../utils/logger')
 // models
 const Group = require('../../models/Group')
 const Poll = require('../../models/Poll')
+const Vote = require('../../models/Vote')
 
 const registerVote = async (req, res, next) => {
   try {
@@ -22,16 +23,22 @@ const registerVote = async (req, res, next) => {
     if (groupName !== poll.group)
       return next(new CustomError(`vote doesn't belongs to this group`, 403))
 
+    
+    const voteExists = await Vote.findOne({votedBy: user.username, poll: poll._id})
+    if(voteExists) return next(new CustomError('voter has already registered once', 400));
     let isVoted = false
-    poll.options.map((option) => {
+
+    for (let option of poll.options) {
       if (option.optionText === vote) {
-        if(option.votes.some(vote => vote.votedBy === user.username))
-          throw new CustomError('voter has already registered once', 400)
-        option.votes.push({votedBy: user.username})
-        option.votesCount += 1
-        isVoted = true
+
+        let vote = new Vote({votedBy: user.username, poll: poll._id})
+        vote = await vote.save()
+        option.votes.push(vote._id);
+        option.votesCount += 1;
+        isVoted = true;
+        break; // Exit the loop since the vote is registered
       }
-    })
+    }
 
     poll = poll.save()
 

@@ -30,3 +30,93 @@
     at createPoll (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\createPoll.js:34:17)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 2024-06-30T05:22:21.016Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T11:59:32.839Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T11:59:33.259Z [31merror[39m: Error: you are not a member of this group & undefined statusCode: 403
+2024-06-30T11:59:33.260Z [31merror[39m: Error: you are not a member of this group
+    at getPolls (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:18:60)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T11:59:33.305Z [31merror[39m: Error: you are not a member of this group & undefined statusCode: 403
+2024-06-30T11:59:33.307Z [31merror[39m: Error: you are not a member of this group
+    at getPolls (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:18:60)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:09:21.195Z [31merror[39m: Error: voter has already registered once & undefined statusCode: 400
+2024-06-30T12:09:21.196Z [31merror[39m: Error: voter has already registered once
+    at C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:29:17
+    at Array.map (<anonymous>)
+    at methods.<computed> (C:\Users\mohammad\Documents\GitHub\SecureChat\server\node_modules\mongoose\lib\types\array\methods\index.js:1027:24)
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:26:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:09:21.197Z [31merror[39m: Error: failed to vote & voter has already registered once statusCode: 500
+2024-06-30T12:09:21.197Z [31merror[39m: Error: failed to vote
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:44:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:11:59.710Z [31merror[39m: Error: voter has already registered once & undefined statusCode: 400
+2024-06-30T12:11:59.711Z [31merror[39m: Error: voter has already registered once
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:38:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:12:02.358Z [31merror[39m: Error: voter has already registered once & undefined statusCode: 400
+2024-06-30T12:12:02.359Z [31merror[39m: Error: voter has already registered once
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:38:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:12:35.436Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T12:13:51.331Z [31merror[39m: Error: voter has already registered once & undefined statusCode: 400
+2024-06-30T12:13:51.331Z [31merror[39m: Error: voter has already registered once
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:38:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:13:58.914Z [31merror[39m: Error: voter has already registered once & undefined statusCode: 400
+2024-06-30T12:13:58.914Z [31merror[39m: Error: voter has already registered once
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:38:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:14:09.641Z [31merror[39m: Error: voter has already registered once & undefined statusCode: 400
+2024-06-30T12:14:09.642Z [31merror[39m: Error: voter has already registered once
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:38:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:22:54.544Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T12:31:22.841Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T12:31:48.459Z [31merror[39m: Error: failed to vote & Vote validation failed: poll: Path `poll` is required. statusCode: 500
+2024-06-30T12:31:48.459Z [31merror[39m: Error: failed to vote
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:49:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:32:23.979Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T12:38:24.980Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T12:38:53.945Z [31merror[39m: Error: group with this name doesn't exists & undefined statusCode: 404
+2024-06-30T12:38:53.946Z [31merror[39m: Error: group with this name doesn't exists
+    at getPolls (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:16:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:38:53.978Z [31merror[39m: Error: group with this name doesn't exists & undefined statusCode: 404
+2024-06-30T12:38:53.978Z [31merror[39m: Error: group with this name doesn't exists
+    at getPolls (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:16:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:39:48.994Z [31merror[39m: Error: group with this name doesn't exists & undefined statusCode: 404
+2024-06-30T12:39:48.995Z [31merror[39m: Error: group with this name doesn't exists
+    at getPolls (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:16:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:39:49.021Z [31merror[39m: Error: group with this name doesn't exists & undefined statusCode: 404
+2024-06-30T12:39:49.022Z [31merror[39m: Error: group with this name doesn't exists
+    at getPolls (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\getPolls.js:16:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:40:01.094Z [31merror[39m: Error: Missing required fields: users & undefined statusCode: 500
+2024-06-30T12:40:01.094Z [31merror[39m: Error: Missing required fields: users
+    at C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\checkFields.js:8:25
+    at Layer.handle [as handle_request] (C:\Users\mohammad\Documents\GitHub\SecureChat\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\mohammad\Documents\GitHub\SecureChat\server\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\middlewares\authenticate.js:33:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:40:31.071Z [31merror[39m: Error: Creating group failed & E11000 duplicate key error collection: SecureChat.certs index: name_1 dup key: { name: "test" } statusCode: 500
+2024-06-30T12:40:31.073Z [31merror[39m: Error: Creating group failed
+    at createGroup (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\group\createGroup.js:62:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:41:26.071Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T12:41:55.895Z [31merror[39m: Error: failed to vote & vote.findOne is not a function statusCode: 500
+2024-06-30T12:41:55.896Z [31merror[39m: Error: failed to vote
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:53:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:42:51.102Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T12:42:55.401Z [31merror[39m: Error: voter has already registered once & undefined statusCode: 400
+2024-06-30T12:42:55.402Z [31merror[39m: Error: voter has already registered once
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T12:42:58.467Z [31merror[39m: Error: voter has already registered once & undefined statusCode: 400
+2024-06-30T12:42:58.467Z [31merror[39m: Error: voter has already registered once
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

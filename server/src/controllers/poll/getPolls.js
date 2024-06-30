@@ -9,7 +9,6 @@ const Poll = require('../../models/Poll')
 const getPolls = async (req, res, next) => {
   try {
     const user = req.user
-    // const { groupName, question, options } = req.body
     const {groupName} = req.params
 
     const group = await Group.findOne({ name: groupName })
@@ -18,10 +17,8 @@ const getPolls = async (req, res, next) => {
     if(!group.members.includes(user.username)) return next(new CustomError("you are not a member of this group", 403))
 
     const polls = await Promise.all(group.polls.map(async(poll) => {
-      return await Poll.findById(poll)
+      return await Poll.findById(poll).populate('options.votes');
     }))
-
-    console.log(polls)
 
     res.status(200).json({ message: 'fetching polls successfully', polls })
 

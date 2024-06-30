@@ -20,7 +20,7 @@ const checkFields = require('../middlewares/checkFields')
 
 router.get('/groups', authenticate('Bearer'), authorize(['user', 'admin', 'super']), getGroups);
 router.get('/allGroups', authenticate('Bearer'), authorize(['super']), getAllGroups);
-router.post('/create', authenticate('Bearer'), checkFields(['groupName', 'description', 'users']), authorize(['admin', 'super']), createGroups);
+router.post('/create', authenticate('Bearer'), checkFields(['groupName', 'description']), authorize(['admin', 'super']), createGroups);
 router.post('/delete', authenticate('Bearer'), checkFields(['groupName']), authorize(['super']), deleteGroup);
 router.post('/inviteMember', authenticate('Bearer'), checkFields(['groupName', 'member']), authorize(['admin', 'super']), inviteMember);
 router.patch('/removeMember', authenticate('Bearer'), checkFields(['groupName', 'member']), authorize(['admin', 'super']), removeMember);
