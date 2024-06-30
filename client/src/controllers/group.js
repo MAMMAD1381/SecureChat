@@ -225,11 +225,11 @@ async function getPolls(groupName) {
   }
 }
 
-async function registerVote(groupName, pollId, vote) {
+async function registerVote(groupName, pollId, vote, signature) {
   const token = LocalStorage.get('token')
   const response = await axios.post(
     `${configs.SERVER_URL}/api/poll/group/${groupName}/vote`,
-    { pollId, vote },
+    { pollId, vote, signature },
     {
       headers: {
         'Content-Type': 'application/json',

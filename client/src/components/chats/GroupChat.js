@@ -44,9 +44,20 @@ const GroupChat = () => {
   const refreshPolls = async () => {
     try {
       const polls = await getPolls(group.name)
+      const verifiedPolls = []
       if(polls && polls.length > 0){
-        console.log(polls, polls.length)
-        setPolls(polls)
+        for(let poll of polls){
+          const cert = await getPollsCert(poll.cert)
+          const isGroupNameVerified = cert.name === poll.group
+          const isOwnerVerified = cert.certOwner === poll.createdBy
+
+          const crypto = new Crypto(null, cert.publicKey)
+          const isSignatureVerified = crypto.verifySignature(poll.group, cert.signature)
+          
+          if(isOwnerVerified && isGroupNameVerified && isSignatureVerified)
+            verifiedPolls.push(poll)
+        }
+        setPolls(verifiedPolls)
       }
     } catch (error) {
       showMessage(`Refreshing users failed. Error details: ${error}`)
@@ -59,14 +70,10 @@ const GroupChat = () => {
     } catch (error) {
       showMessage(`Error refreshing data: ${error}`, 'danger')
     }
-    // finally {
-    //   setLoading(false);
-    // }
   }
 
   useEffect(() => {
     refreshData()
-    // refreshUsers();
     const socket = io(configs.SERVER_SOCKET_URL, {
       auth: { token: LocalStorage.get('token') },
     })
@@ -136,9 +143,10 @@ const GroupChat = () => {
   }
 
   const handleVote = async (pollId, option) => {
-    console.log('here?')
     try {
-      const result = await registerVote(group.name, pollId, option.optionText)
+      const crypto = new Crypto(user.privateKey, user.publicKey)
+      const signature = crypto.signData(option.optionText)
+      const result = await registerVote(group.name, pollId, option.optionText, signature)
       if (result) {
         await refreshPolls()
         showMessage('Vote recorded', 'info')

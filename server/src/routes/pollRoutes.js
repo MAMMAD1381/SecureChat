@@ -14,7 +14,7 @@ const checkFields = require('../middlewares/checkFields')
 
 router.post('/create', authenticate('Bearer'), checkFields(['groupName', 'question', 'options']), authorize(['admin', 'super']), createPoll);
 router.get('/group/:groupName', authenticate('Bearer'), authorize(['user', 'admin', 'super']), getPolls);
-router.post('/group/:groupName/vote', authenticate('Bearer'), checkFields(['pollId', 'vote']), authorize(['user', 'admin', 'super']), registerVote);
-router.get('/cert/:cert', authenticate('Bearer'), authorize(['user', 'admin', 'super']), getCert);
+router.post('/group/:groupName/vote', authenticate('Bearer'), checkFields(['pollId', 'vote', 'signature']), authorize(['user', 'admin', 'super']), registerVote);
+router.get('/cert/:certId', authenticate('Bearer'), authorize(['user', 'admin', 'super']), getCert);
 
 module.exports = router;

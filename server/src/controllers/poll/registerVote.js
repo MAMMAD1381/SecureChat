@@ -1,6 +1,7 @@
 // utils
 const CustomError = require('../../utils/CustomError')
 const logger = require('../../utils/logger')
+const Crypto = require('../../utils/Crypto')
 
 // models
 const Group = require('../../models/Group')
@@ -10,8 +11,12 @@ const Vote = require('../../models/Vote')
 const registerVote = async (req, res, next) => {
   try {
     const user = req.user
-    const { pollId, vote } = req.body
+    const { pollId, vote, signature } = req.body
     const { groupName } = req.params
+
+    const crypto = new Crypto(user.privateKey, user.publicKey)
+    const isSignatureVerified = crypto.verifySignature(vote, signature)
+    if(!isSignatureVerified) return next(new CustomError("signature of vote is not verified", 403))
 
     const group = await Group.findOne({ name: groupName })
     if (!group) return next(new CustomError("group with this name doesn't exists", 404))

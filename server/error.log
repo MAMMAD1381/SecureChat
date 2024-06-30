@@ -120,3 +120,12 @@
 2024-06-30T12:42:58.467Z [31merror[39m: Error: voter has already registered once
     at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:28:32)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-06-30T13:58:03.440Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T14:00:27.294Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T14:01:25.435Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T14:03:44.445Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T14:25:54.608Z [31merror[39m: error on handling user disconnection. more details: Cannot read properties of undefined (reading 'username')
+2024-06-30T14:26:20.053Z [31merror[39m: Error: voter has already registered once & undefined statusCode: 400
+2024-06-30T14:26:20.053Z [31merror[39m: Error: voter has already registered once
+    at registerVote (C:\Users\mohammad\Documents\GitHub\SecureChat\server\src\controllers\poll\registerVote.js:33:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
