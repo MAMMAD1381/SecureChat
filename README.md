@@ -183,3 +183,60 @@ server/
 - **server.js**: Main entry point for the server application.
 
 This structure should make it clear and easy to understand the layout and organization of your project.
+
+# Project Features
+
+### Configuration Management
+
+- **External Configuration Files**: Sensitive information such as database credentials, server ports, and other crucial settings are stored in separate configuration files rather than being hard-coded in the server files. This ensures that during server startup, all essential data is loaded securely from these files.
+
+- **Avoiding Hard-Coding Secrets**: We avoid embedding critical secrets (e.g., API keys, database URLs) directly in the codebase. Instead, they are loaded from secure environments, reducing the risk of exposure in public repositories or during code sharing.
+
+### Logging and Monitoring
+
+- **Detailed Logging**: The system maintains comprehensive logs that track significant actions and events, including:
+  - User sign-up and login attempts.
+  - Profile access requests.
+  - Message exchanges between users.
+
+- **Log Files**: All logs are recorded in structured log files, such as `combined.log`, which facilitates easy monitoring and debugging. Logs include user activities, authorization attempts, and error messages.
+
+### Integrity Verification
+
+- **Message Integrity**: Each message’s integrity is verified to ensure that it hasn’t been tampered with during transmission. This verification process helps maintain the authenticity of the communication.
+
+### Security Measures
+
+- **Domain-based Request Restrictions**: Security mechanisms are in place to ensure that only authorized domains can send requests to our system. This is part of our Cross-Origin Resource Sharing (CORS) configuration, which restricts which domains can interact with our APIs.
+
+- **CORS Configuration**: CORS policies are implemented to:
+  - Block unauthorized domains from making requests.
+  - Control the types of headers and methods allowed in requests.
+  - Ensure that only specific, pre-defined headers are used in communications.
+
+### API and Data Access
+
+- **Restricted API Methods**: Not all HTTP methods are accessible by default. Only allowed methods are exposed, limiting the attack surface and preventing unauthorized actions.
+
+- **Header Validation**: Incoming requests are checked for specific headers. If a request does not contain the necessary headers, it is blocked. This helps to prevent malicious requests and ensures only legitimate traffic reaches our server.
+
+- **Cookie Security**: Cookies are used securely to manage session data and authentication tokens. Appropriate flags (such as `HttpOnly`, `Secure`, and `SameSite`) are applied to prevent unauthorized access and transmission of cookie data.
+
+- ### Error Handling
+
+- **Developer vs. User Errors**: Errors are handled differently for developers and users:
+  - **Developer Errors**: Detailed error logs are maintained on the server side, providing developers with comprehensive information about issues. For instance, if a variable is used that doesn’t exist, this is logged for developers to debug.
+  - **User Errors**: Users receive simplified error messages that do not expose sensitive implementation details. Instead of informing the user about a specific undefined variable, they receive a general error message, such as "Login failed." This approach helps in maintaining security by not revealing server-side details to users.
+
+- **Logging**: Error logs are stored in different formats:
+  - **Console Logs**: Errors are logged to the console during development for quick debugging.
+  - **File Logs**: Errors are also logged to files for persistent storage and future analysis.
+
+### Key Management
+
+- **Key Generation**: Public keys are generated using a specific type of cryptographic algorithm and stored in secure files. The type of keys used and the algorithms are documented for developer reference.
+
+- **Password Handling**: User passwords are never sent in plain text. They are securely hashed and stored using industry-standard practices to ensure their protection.
+
+- **Token Management**: Authentication tokens are set with expiration dates to enhance security:
+  - **Cookie-based Tokens**: Tokens used for authentication are stored in cookies with a specific expiration date, such as 30 days. This prevents tokens from being valid indefinitely and reduces the risk of unauthorized access.
