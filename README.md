@@ -222,7 +222,7 @@ This structure should make it clear and easy to understand the layout and organi
 
 - **Cookie Security**: Cookies are used securely to manage session data and authentication tokens. Appropriate flags (such as `HttpOnly`, `Secure`, and `SameSite`) are applied to prevent unauthorized access and transmission of cookie data.
 
-- ### Error Handling
+- ## Error Handling
 
 - **Developer vs. User Errors**: Errors are handled differently for developers and users:
   - **Developer Errors**: Detailed error logs are maintained on the server side, providing developers with comprehensive information about issues. For instance, if a variable is used that doesn’t exist, this is logged for developers to debug.
@@ -240,3 +240,51 @@ This structure should make it clear and easy to understand the layout and organi
 
 - **Token Management**: Authentication tokens are set with expiration dates to enhance security:
   - **Cookie-based Tokens**: Tokens used for authentication are stored in cookies with a specific expiration date, such as 30 days. This prevents tokens from being valid indefinitely and reduces the risk of unauthorized access.
+
+## Session Management Methods
+
+- **Token-Based Authentication**: 
+  - **Usage**: Users can authenticate using tokens. After login or registration, the system issues a token that the user can use to access protected routes.
+  - **Storage**: Tokens are typically stored on the client-side, such as in local storage or session storage.
+  
+- **Cookie-Based Authentication**:
+  - **Usage**: Users can also authenticate using cookies. Upon login or registration, a cookie containing the session token is set in the user's browser.
+  - **Storage**: Cookies are automatically managed by the browser and can be configured to have specific properties such as `HttpOnly`, `Secure`, and expiration dates.
+
+### Route-Specific Authentication
+
+- **Flexible Authentication Methods**: Each route specifies which authentication method it supports:
+  - **Token-Required Routes**: Some routes are configured to require token-based authentication. These routes do not rely on cookies and are used when tokens are preferred for session management.
+  - **Cookie-Required Routes**: Other routes can require cookie-based authentication, where the presence of a valid cookie is necessary for access. This is useful in scenarios where cookies are a more convenient or secure option.
+
+- **Route Configuration**: Routes are clearly documented to indicate their required authentication method. For example, routes labeled with `auth-token` require token-based authentication, while those with `auth-cookie` require cookie-based authentication.
+
+### Practical Application
+
+- **Token Use Case**: Ideal for APIs where clients (such as mobile apps or single-page applications) store tokens and include them in requests to access resources.
+- **Cookie Use Case**: Suitable for web applications where maintaining session state via cookies is convenient and secure.
+
+## User Roles
+
+- **Role Hierarchy**: The system supports three distinct roles:
+  - **Super Admin**: The highest level of access, capable of performing all administrative tasks, including approving new Admins.
+  - **Admin**: Can manage certain administrative tasks but cannot elevate other users to Admin or Super Admin status without approval from a Super Admin.
+  - **Regular User**: Default role for all new registrations. Users start with basic access and can be elevated to Admin status.
+
+- **Role Assignment**:
+  - **Default Assignment**: Upon registration, all users are assigned the Regular User role by default.
+  - **Admin Elevation**: Users can be elevated to Admin status, but this change must be approved by a Super Admin.
+  - **Super Admin Creation**: A user cannot directly create a Super Admin account. Instead, the first user to register in the system or database is automatically assigned the Super Admin role. This ensures that there is no direct method for creating additional Super Admins, thus limiting high-level access.
+
+### Security Mechanisms
+
+- **Controlled Elevation**: 
+  - **Approval Requirement**: Elevation to Admin requires approval from a Super Admin, ensuring controlled and secure promotion processes.
+  - **No Direct Super Admin Creation**: The system does not allow the creation of Super Admins through any direct method, such as registration or form submissions. The only way to have a Super Admin is by the system's automatic assignment during the first user registration.
+
+- **Manual Role Changes**: To further secure the system, any changes to roles (especially to Super Admin) must be done manually within the database. This prevents any unintended or unauthorized elevation of privileges through the application interface.
+
+### Practical Application
+
+- **Initial Setup**: During initial setup, the first registered user gains Super Admin status automatically, ensuring that the system has an initial point of high-level control.
+- **Subsequent Access Control**: All subsequent changes in user roles are tightly controlled and monitored to maintain the integrity and security of the access control system.
