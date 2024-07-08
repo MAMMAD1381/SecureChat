@@ -25,6 +25,7 @@
     - [3.3. Group Oversight](#33-group-oversight)
     - [3.4. Privacy Restrictions](#34-privacy-restrictions)
     - [Invitation System](#invitation-system)
+  - [Create a poll](#create-a-poll)
   - [Group and Poll Certificates](#group-and-poll-certificates)
 - [Project Features](#project-features)
     - [Logging and Monitoring](#logging-and-monitoring)
@@ -63,6 +64,7 @@
     - [Security Asset](#security-asset-5)
     - [Threats](#threats-5)
     - [Our Solutions](#our-solutions-5)
+- [Contributors](#contributors)
 
 
 # Overview
@@ -235,7 +237,7 @@ server/
 - **utils/**: Utility functions and helpers for the server-side application.
 - **server.js**: Main entry point for the server application.
 
-This structure should make it clear and easy to understand the layout and organization of your project.
+This structure should make it clear and easy to understand the layout and organization of the project.
 
 
 
@@ -402,6 +404,9 @@ The Super Admin dashboard provides controls over the system and access managemen
         <img src="./Img/Member POV.jpg" alt="group page">
         <figcaption>Group Member POV</figcaption>
     </figure>
+
+## Create a poll
+only the owner of the group can start a vote. Once the group owner creates a poll, they announce it by signing the "Voting" message with their private key and sending it to server.
 
 ## Group and Poll Certificates
 
@@ -625,3 +630,9 @@ The Super Admin dashboard provides controls over the system and access managemen
 - **Secure Logging**: Logs are securely stored, and access is restricted to authorized personnel only.
 - **Error Masking**: Masks sensitive information in user-facing error messages to prevent information leakage.
 
+# Contributors
+
+This project was created and maintained by the following individuals:
+
+- [Mohammad Mohamadian](https://github.com/MAMMAD1381)
+- [MohammadReza MirRashid](https://github.com/mmdreza00mirrashid)
