@@ -11,11 +11,12 @@ const getUserPublicKey = async (req, res, next) => {
         
         const username = req.params.username;
         const requestedUser = await User.findOne({username}).select('username publicKey');
+        console.log(requestedUser)
 
         if (!requestedUser)
             return next(new CustomError(`user not found`, 404))
         
-        res.status(200).json({message:'success', requestedUser})
+        res.status(200).json({message:'success', user: requestedUser})
 
         logger.info(`user: ${user.username} requested public key of user: ${username}`)
 
