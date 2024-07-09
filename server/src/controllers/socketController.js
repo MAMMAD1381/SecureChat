@@ -7,8 +7,8 @@ const Group = require('../models/Group')
 
 async function handlePrivateMessage(socket, io, data, ack) {  
   try {
-    const { user, target } = data
-    logger.info(`new private message from user: ${user.username} to user: ${target.username}`)
+    const { sender, target } = data
+    logger.info(`new private message from user: ${sender.username} to user: ${target.username}`)
     io.users[data.target.username].emit('privateMessage', data)
   } catch (err) {
     logger.error(`error on handling private message. more details: ${err.message}`)

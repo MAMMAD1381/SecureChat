@@ -23,10 +23,10 @@ const Chat = () => {
     socketRef.current = socket
 
     socket.on('privateMessage', async (data) => {
-      const { user, encodedMessage, signature } = data
+      const { sender, encodedMessage, signature } = data
       try {
-        const sendersPublickey = await getPublickey(user.username)
-        const crypto = new Crypto(LocalStorage.get('private_key'), sendersPublickey)
+        const sendersPublickey = await getPublickey(sender.username)
+        const crypto = new Crypto(user.privateKey, sendersPublickey)
         const decodedMessage = crypto.decryptData(encodedMessage)
         crypto.verifySignature(decodedMessage, signature)
         data.message = decodedMessage
@@ -50,16 +50,16 @@ const Chat = () => {
     let signature, encodedMessage
     try {
       const targetsPublickey = await getPublickey(target.username)
-      const crypto = new Crypto(LocalStorage.get('private_key'), targetsPublickey)
+      const crypto = new Crypto(user.privateKey, targetsPublickey)
       signature = crypto.signData(message)
       encodedMessage = crypto.encryptData(message)
     } catch (err) {
       showMessage('encoding or signing message failed', 'danger')
     }
-    socketRef.current.emit('privateMessage', { user, target, signature, encodedMessage }, (ack) => {
+    socketRef.current.emit('privateMessage', { sender: user, target, signature, encodedMessage }, (ack) => {
       console.log(ack)
     })
-    setMessages((prevMessages) => [...prevMessages, { user, target, message }])
+    setMessages((prevMessages) => [...prevMessages, { sender: user, target, message }])
     setMessage('')
   }
 
@@ -82,15 +82,15 @@ const Chat = () => {
                 <div
                   key={index}
                   className={`d-flex justify-content-${
-                    msg.user.username === user.username ? 'end' : 'start'
+                    msg.sender.username === user.username ? 'end' : 'start'
                   } mb-2`}
                 >
                   <div
                     className={`p-2 rounded ${
-                      msg.user.username === user.username ? 'bg-primary text-white' : 'bg-light'
+                      msg.sender.username === user.username ? 'bg-primary text-white' : 'bg-light'
                     }`}
                   >
-                    <strong>{msg.user.username}: </strong>
+                    <strong>{msg.sender.username}: </strong>
                     {msg.message}
                   </div>
                 </div>
