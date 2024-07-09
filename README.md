@@ -546,10 +546,14 @@ only the owner of the group can start a vote. Once the group owner creates a pol
 ### Security Asset
 - **Tokens**: JSON Web Tokens (JWTs) and cookies used for authenticating and authorizing users.
 
+**Value**: High
+
 ### Threats
 - **Token Hijacking**: Unauthorized interception and misuse of tokens.
 - **Replay Attacks**: Reusing a token to impersonate a user after its original use.
 - **Forgery**: Creating fake tokens to gain unauthorized access.
+
+**Danger Level**: High
 
 ### Our Solutions
 - **Token Validation Middleware**: Ensures that tokens are valid and appends a user object to the request upon successful validation.
@@ -563,9 +567,14 @@ only the owner of the group can start a vote. Once the group owner creates a pol
 ### Security Asset
 - **User Roles**: Different access levels, including Regular User, Admin, and Super Admin.
 
+**Value**: High
+
 ### Threats
 - **Privilege Escalation**: Unauthorized users gaining higher privileges.
 - **Role Injection**: Manipulating role assignments through system vulnerabilities.
+
+
+**Danger Level**: High
 
 ### Our Solutions
 - **Super Admin Review**: Admin requests are reviewed and approved or rejected by Super Admins, ensuring controlled role escalation.
@@ -578,9 +587,13 @@ only the owner of the group can start a vote. Once the group owner creates a pol
 - **Certificates**: Used for validating group invitations and interactions.
 - **Invitations**: Secure group invitation process.
 
+**Value**: Medium
+
 ### Threats
 - **Forgery**: Creating fake certificates to gain unauthorized access to groups.
 - **Unauthorized Access**: Manipulating invitations to join groups without proper authorization.
+
+**Danger Level**: High
 
 ### Our Solutions
 - **Certificate Validation**: Ensures that all invitations and interactions are validated against the group's certificate to confirm their authenticity.
@@ -592,9 +605,17 @@ only the owner of the group can start a vote. Once the group owner creates a pol
 ### Security Asset
 - **Middleware Layers**: Token or cookie validation, user appending, and role-based access control.
 
+**Value**: Medium
+
 ### Threats
 - **Bypass Attacks**: Attempting to bypass middleware checks to gain unauthorized access.
+
+  **Danger Level**: Medium
 - **Invalid Requests**: Sending requests with missing or manipulated fields to exploit system vulnerabilities.
+  
+  **Danger Level**: High
+
+
 
 ### Our Solutions
 - **Layered Middleware**: Implements a multi-layered approach for token validation and user appending, ensuring robust security.
@@ -607,9 +628,15 @@ only the owner of the group can start a vote. Once the group owner creates a pol
 - **HTTP Server (Express)**: Manages user CRUD operations, group management, and admin requests.
 - **Socket Server**: Handles real-time communication features.
 
+**Value**: High
+
 ### Threats
 - **Cross-Server Exploits**: Exploiting vulnerabilities between HTTP and Socket servers to gain unauthorized access.
+
+  **Danger Level**: High
 - **Real-Time Data Manipulation**: Intercepting and manipulating real-time communication data.
+
+  **Danger Level**: High
 
 ### Our Solutions
 - **Distinct Responsibilities**: The HTTP server manages CRUD operations and admin functionalities, while the Socket server handles real-time communication, reducing cross-server attack vectors.
@@ -621,14 +648,21 @@ only the owner of the group can start a vote. Once the group owner creates a pol
 ### Security Asset
 - **Error Logs**: Logs capturing errors and unusual activities for analysis.
 
+**Value**: Low
+
 ### Threats
 - **Log Injection**: Injecting malicious data into logs to alter or manipulate log records.
+
+  **Danger Level**: Medium
 - **Information Leakage**: Exposing sensitive information through error messages.
+
+  **Danger Level**: High
 
 ### Our Solutions
 - **Developer vs. User Logs**: Differentiates between developer and user-facing errors, showing user-friendly messages to users and detailed logs to developers.
 - **Secure Logging**: Logs are securely stored, and access is restricted to authorized personnel only.
 - **Error Masking**: Masks sensitive information in user-facing error messages to prevent information leakage.
+
 
 # Contributors
 
